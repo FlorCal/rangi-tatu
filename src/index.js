@@ -4,13 +4,13 @@ import ReactDOM from 'react-dom'
 import './index.scss'
 
 class Container extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Hello, I am working! YAY!!</h1>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <h1>Hello, I am working! YAY!!</h1>
+            </div>
+        );
+    }
 }
 
 ReactDOM.render(<Container />, document.getElementById('app'));

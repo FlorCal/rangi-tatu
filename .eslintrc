@@ -1,0 +1,26 @@
+{
+ "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+
+ "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
+  },
+
+  "env": {
+      "browser": true,
+  },
+
+  "rules": {
+    "react/prop-types": 0,
+    "indent": ["error", 4],
+    "no-debugger": 0
+  }
+}
