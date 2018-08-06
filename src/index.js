@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom'
 
 import './index.scss'
 
-class Container extends React.Component {
+//componenets
+import Container from './Container'
+
+class Renderer extends React.Component {
     render() {
         return (
             <div>
-                <h1>Hello, I am working! YAY!!</h1>
+                <Container />
             </div>
         );
     }
 }
 
-ReactDOM.render(<Container />, document.getElementById('app'));
+ReactDOM.render(<Renderer />, document.getElementById('app'));
