@@ -1,0 +1,13 @@
+.PickerComponent {
+    position: fixed;
+    left: -320px;
+    top: 0;
+    width: 320px;
+    height: 100vh;
+    background: yellow;
+    transition: left 300ms ease-out;
+
+    &.open {
+        left: 0;
+    }
+}
