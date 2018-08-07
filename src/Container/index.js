@@ -1,14 +1,15 @@
 import React from 'react'
 
-import Picker from '../Picker'
 import Header from '../Header'
+import Schemes from '../Schemes'
+
 
 class ContainerComponent extends React.Component {
     render() {
         return (
             <div className='ContainerComponent'>
-                <Picker />
                 <Header />
+                <Schemes />
             </div>
         );
     }

@@ -5,14 +5,17 @@ import './index.scss'
 
 //componenets
 import Container from './Container'
-import Header from './Header'
+import Picker from './Picker'
+import Intro from './Intro'
+
 
 class Renderer extends React.Component {
     render() {
         return (
             <div>
                 <Container />
-                <Header />
+                <Picker />
+                <Intro />
             </div>
         );
     }
