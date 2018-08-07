@@ -6,8 +6,29 @@
     height: 100vh;
     background: yellow;
     transition: left 300ms ease-out;
+    display: grid;
+    grid-column: 320px;
+    grid-template-rows: 100px 1fr 410px;
+    grid-template-areas:
+    'header'
+    'menu'
+    'button';
+
 
     &.open {
         left: 0;
     }
+
+    .header {
+        grid-area: header;
+    }
+
+    .menu {
+        grid-area: menu;
+    }
+
+    .button {
+        grid-area: button;
+    }
+
 }
