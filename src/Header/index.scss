@@ -1,0 +1,22 @@
+.HeaderComponent {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background: green;
+    display: grid;
+    grid-template-columns: 400px 1fr 400px;
+    grid-template-areas: 'picker title q';
+
+    .picker {
+        grid-area: picker;
+    }
+
+    .title {
+        grid-area: title;
+    }
+
+    .q {
+        grid-area: q;
+    }
+
+}
