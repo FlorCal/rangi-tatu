@@ -4,9 +4,9 @@ class HeaderComponent extends React.Component {
     render() {
         return (
             <div className='HeaderComponent'>
-                <a className='picker'>
-                Picker
-                </a>
+                <div className='picker' onClick={this.props.openPicker}>
+                    Picker
+                </div>
                 <h1 className='title'>
                 Rangi Tatu
                 </h1>
