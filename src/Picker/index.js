@@ -3,17 +3,20 @@ import React from 'react'
 
 
 class PickerComponent extends React.Component {
+
+
     render() {
+
         return (
-            <div className='PickerComponent open'>
+            <div className={'PickerComponent' + (this.props.picker ? ' open' : '' ) }>
                 <div className='header'>
-                    <a>Close</a>
+                    <div onClick={this.props.closePicker}>Close</div>
                 </div>
                 <div className='menu'>
-                Menu
+              Menu
                 </div>
                 <div className='button'>
-                Button
+              Button
                 </div>
             </div>
         )
