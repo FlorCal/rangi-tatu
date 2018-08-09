@@ -1,3 +1,26 @@
+// varibles
+$cWhite: #FCFCFC;
+$cGrey: #333;
+$cBlack: #000;
+$sFont: 16px;
+
+// fonts
+@font-face {
+    font-family: fMedium;
+    src: url('app/fonts/Eczar-Medium.ttf');
+}
+
+@font-face {
+    font-family: fRegular;
+    src: url('app/fonts/Eczar-Regular.ttf');
+}
+
+@font-face {
+    font-family: fBold;
+    src: url('app/fonts/Eczar-Bold.ttf');
+}
+
+// main
 @import './app/reset.scss';
 
 //components
@@ -10,3 +33,17 @@
 @import './Schemes/Scheme/index.scss';
 @import './Stir/index.scss';
 @import './About/index.scss';
+
+// core
+body {
+    background: $cWhite;
+    font-family: fMedium;
+    font-size: $sFont;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $cGrey;
+
+    .fBlack {
+        font-family: fBold;
+    }
+}
