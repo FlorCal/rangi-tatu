@@ -1,0 +1,71 @@
+.IntroComponent {
+    position: fixed;
+    background: $cOffWhite;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 575px 1fr;
+    grid-template-rows: 1fr 200px 118px 2fr;
+    grid-template-areas:
+    '. title .'
+    '. info .'
+    '. button .'
+    '. . .';
+
+    .title {
+        grid-area: title;
+        align-self: end;
+        justify-self: center;
+        font-family: fBold;
+        font-size: 48px;
+    }
+
+    .info {
+        grid-area: info;
+        font-size: $sFontbig;
+        font-family: fRegular;
+        text-align: center;
+        align-self: center;
+        line-height: 40px;
+        word-spacing: .5px;
+        padding-top: 70px;
+
+
+        .border {
+            border-bottom: 5px solid $cGrey;
+            padding-top: 50px;
+            margin: 0 8px 0 6px;
+        }
+    }
+
+    .button {
+        grid-area: button;
+        width: 200px;
+        height: 64px;
+        border-radius: 4px;
+        border: 0;
+        box-shadow: inset 0 -6px 0 0 rgba(0, 0, 0, .3),
+        2px 6px 2px 1px rgba(51, 51, 51, .1);
+        justify-self: center;
+        align-self: end;
+        background: #4f5a65;
+        color: $cWhite;
+        font-size: $sFontMedium;
+        font-family: fRegular;
+        outline: none;
+
+        &:hover {
+            cursor: pointer;
+            transition: background 1s ease;
+            background: #654ecc;
+        }
+
+        &:active{
+            box-shadow: inset 0 5px 0 0 rgba(0, 0, 0, .3);
+            background: #4f5a65;
+            border: 4px solid #53cbed;
+        }
+    }
+}
