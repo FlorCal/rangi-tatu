@@ -1,0 +1,32 @@
+.ButtonComponent {
+    grid-area: ButtonComponent;
+    width: 200px;
+    height: 64px;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: inset 0 -6px 0 0 rgba(0, 0, 0, .3),
+    2px 6px 2px 1px rgba(51, 51, 51, .1);
+    justify-self: center;
+    align-self: end;
+    background: #4f5a65;
+    color: $cWhite;
+    font-size: $sFontMedium;
+    font-family: fRegular;
+    outline: none;
+
+    &:hover {
+        cursor: pointer;
+        transition: background 1s ease;
+        background: #654ecc;
+    }
+
+    &:active{
+        box-shadow: inset 0 5px 0 0 rgba(0, 0, 0, .3);
+        background: #4f5a65;
+
+    }
+
+    &:focus {
+        border: 5px solid #53cbed;
+    }
+}

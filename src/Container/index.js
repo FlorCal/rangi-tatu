@@ -12,7 +12,7 @@ class ContainerComponent extends React.Component {
         return (
             <div className='ContainerComponent'>
                 <Header {...this.props} />
-                <PickerIntro />
+                {!this.props.closeIntro ? <PickerIntro /> : null}
                 <Schemes {...this.props} />
             </div>
         );

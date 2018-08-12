@@ -15,7 +15,7 @@ class Renderer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            picker: false,
+            picker: true,
             intro: true,
             about: false,
         }
@@ -48,10 +48,11 @@ class Renderer extends React.Component {
                 <Container {...this.state}
                     openPicker={this.openPicker.bind(this)}
                     openAbout={this.openAbout.bind(this)}/>
+
                 <Picker {...this.state}
                     closePicker={this.closePicker.bind(this)}/>
 
-                { this.state.intro ?
+                {this.state.intro ?
                     <Intro
                         closeIntro={this.closeIntro.bind(this)}/>
                     : null}
