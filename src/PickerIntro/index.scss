@@ -1,6 +1,6 @@
 .PickerIntroComponent {
     position: initial;
-    background: red;
+    background: $cOffWhite;
     height: 100vh;
     width: 100vw;
     bottom: 0;
@@ -16,9 +16,21 @@
 
     .bowl {
         grid-area: bowl;
+        align-self: center;
+        justify-self: center;
+        padding-bottom: 40px;
     }
 
-    .order {
+    .instruction {
         grid-area: instruction;
+        color: #333;
+        text-align: center;
+        align-self: center;
+        font-size: $sFontbig;
+        font-family: fRegular;
+        line-height: 40px;
+        word-spacing: .5px;
+        padding-bottom: 50px;
+        margin-left: 3px;
     }
 }
