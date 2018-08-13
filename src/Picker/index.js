@@ -1,6 +1,7 @@
 // libraries
 import React from 'react'
 
+import picker from '../app/img/picker.svg'
 
 class PickerComponent extends React.Component {
 
@@ -9,15 +10,28 @@ class PickerComponent extends React.Component {
 
         return (
             <div className={'PickerComponent' + (this.props.picker ? ' open' : '' ) }>
+
                 <div className='header'>
-                    <div onClick={this.props.closePicker}>Close</div>
+
+                    <div className='title'>
+                        <img src={picker} />
+                        <span>Picker</span>
+                    </div>
+
+                    <div className='close' onClick={this.props.closePicker}>
+                        Close
+                        <div></div>
+                    </div>
                 </div>
+
                 <div className='menu'>
-              Menu
+                    Menu
                 </div>
+
                 <div className='button'>
-              Button
+                    Button
                 </div>
+
             </div>
         )
     }

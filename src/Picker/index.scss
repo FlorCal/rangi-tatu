@@ -4,11 +4,11 @@
     top: 0;
     width: 320px;
     height: 100vh;
-    background: yellow;
+    background: $cWhite;
     transition: left 300ms ease-out;
     display: grid;
     grid-column: 320px;
-    grid-template-rows: 100px 1fr 410px;
+    grid-template-rows: 100px 514px 410px;
     grid-template-areas:
     'header'
     'menu'
@@ -21,7 +21,51 @@
 
     .header {
         grid-area: header;
-        
+        display: grid;
+        align-self: center;
+        grid-template-columns: 160px 160px;
+        grid-template-areas: 'title close';
+
+
+        .title {
+            grid-area: title;
+            font-size: 32px;
+            font-family: fBold;
+            padding-bottom: 5px;
+            padding-right: 2px;
+            margin-left: 20px;
+
+
+            img {
+                width: 32px;
+                height: 32px;
+                padding-right: 8px;
+                padding-top: 10px;
+            }
+            span {
+                position: absolute;
+                padding-top: 10px;
+
+            }
+
+        }
+
+        .close {
+            grid-area: close;
+            text-align: end;
+            align-self: center;
+            font-family: fBold;
+            padding-right: 20px;
+            cursor: pointer;
+
+            div {
+                width: 38px;
+                border-bottom: 2px solid $cGrey;
+                margin-left: auto;
+            }
+
+        }
+
     }
 
     .menu {
