@@ -1,0 +1,50 @@
+.DropHex,
+.SelectorComponent {
+    display: grid;
+    grid-template-rows: 20px 18px 18px 44px 20px;
+    grid-template-columns: 40px 1fr 20px;
+    grid-template-areas:
+    '. . .'
+    '. title .'
+    '. . .'
+    '. wrapper .'
+    '. . .';
+
+    .title {
+        grid-area: title;
+        font-family: fBold;
+    }
+
+    .wrapper {
+        grid-area: wrapper;
+        height: 44px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+
+        div {
+            overflow: hidden;
+            border: 1px solid #666;
+            font-family: fRegular;
+            margin-left: -1px;
+            text-align: center;
+            line-height: 44px;
+
+
+            &:first-child {
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+
+            &:last-child {
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+            &.active {
+                background: $cLightGrey;
+                font-family: fBold;
+            }
+        }
+
+    } //wrapper
+
+}// SelectorComponent
