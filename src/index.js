@@ -8,7 +8,7 @@ import Container from './Container'
 import Picker from './Picker'
 import Intro from './Intro'
 import About from './About'
-
+import Loading from './Loading'
 
 class Renderer extends React.Component {
 
@@ -16,16 +16,20 @@ class Renderer extends React.Component {
         super(props);
         this.state = {
             picker: true,
-            intro: true,
+            intro: false,
             about: false,
+            standard: 'WCAG AA',
+            hue: '5°',
+            shade: '5%',
+            loading: false
         }
     }
 
-    closePicker(){
+    closePicker() {
         this.setState({picker: false})
     }
 
-    openPicker(){
+    openPicker() {
         this.setState({picker: true})
     }
 
@@ -41,6 +45,23 @@ class Renderer extends React.Component {
         this.setState({intro: false})
     }
 
+    changeStandard(val) {
+        this.setState({standard: val})
+    }
+
+    changeHue(val) {
+        this.setState({hue: val})
+    }
+
+    changeShade(val) {
+        this.setState({shade: val})
+    }
+
+    openLoading() {
+        this.setState({loading: true})
+    }
+
+
     render() {
 
         return (
@@ -50,7 +71,11 @@ class Renderer extends React.Component {
                     openAbout={this.openAbout.bind(this)}/>
 
                 <Picker {...this.state}
-                    closePicker={this.closePicker.bind(this)}/>
+                    closePicker={this.closePicker.bind(this)}
+                    changeStandard={this.changeStandard.bind(this)}
+                    changeHue={this.changeHue.bind(this)}
+                    changeShade={this.changeShade.bind(this)}
+                    openLoading={this.openLoading.bind(this)}/>
 
                 {this.state.intro ?
                     <Intro
@@ -61,6 +86,10 @@ class Renderer extends React.Component {
                     <About
                         closeAbout={this.closeAbout.bind(this)}/>
                     : null}
+
+                {this.state.loading ?
+                    <Loading /> : null}
+
             </div>
         );
     }
