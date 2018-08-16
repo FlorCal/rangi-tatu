@@ -6,79 +6,46 @@
     height: 100vh;
     background: $cWhite;
     transition: left 300ms ease-out;
-    box-shadow: 4px 0 8px 0 #222;
-    display: grid;
-    grid-column: 320px;
-    grid-template-rows: 100px 514px 410px;
-    grid-template-areas:
-    'header'
-    'menu'
-    'button';
-
+    box-shadow: 4px 0 8px 0 rgba(34, 34, 34, .24);
 
     &.open {
         left: 0;
     }
 
     .header {
-        grid-area: header;
         display: grid;
-        align-self: center;
-        grid-template-columns: 160px 160px;
-        grid-template-areas: 'title close';
+        grid-template-columns: 20px 42px 1fr 1fr 20px;
+        grid-template-rows: 67px 50px;
+        grid-template-areas:
+        '. img title close .'
+        '. . . . .';
+        align-items: end;
 
+
+        img {
+            grid-area: img;
+            width: 32px;
+            height: 32px;
+        }
 
         .title {
             grid-area: title;
             font-size: 32px;
             font-family: fBold;
-            padding-bottom: 5px;
-            padding-right: 2px;
-            margin-left: 20px;
-
-
-            img {
-                width: 32px;
-                height: 32px;
-                padding-right: 8px;
-                padding-top: 10px;
-            }
-            span {
-                position: absolute;
-                padding-top: 10px;
-
-            }
-
         }
 
         .close {
             grid-area: close;
-            text-align: end;
-            align-self: center;
             font-family: fBold;
-            padding-right: 20px;
+            justify-self: right;
+            border-bottom: 2px solid $cGrey;
+            margin-bottom: 7px;
             cursor: pointer;
-
-            div {
-                width: 38px;
-                border-bottom: 2px solid $cGrey;
-                margin-left: auto;
-            }
-
         }
 
-    }
-
-    .menu {
-        grid-area: menu;
-
-        .DropHex {
-
-        }
     }
 
     .button {
-        grid-area: button;
         justify-self: center;
         margin-top: 44px;
     }

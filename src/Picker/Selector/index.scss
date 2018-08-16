@@ -2,7 +2,7 @@
 .SelectorComponent {
     display: grid;
     grid-template-rows: 20px 18px 18px 44px 20px;
-    grid-template-columns: 40px 1fr 20px;
+    grid-template-columns: 20px 1fr 20px;
     grid-template-areas:
     '. . .'
     '. title .'
@@ -13,13 +13,16 @@
     .title {
         grid-area: title;
         font-family: fBold;
+        // padding-top: 25px;
     }
 
     .wrapper {
         grid-area: wrapper;
         height: 44px;
+        // padding-top: 20px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+
 
         div {
             overflow: hidden;
@@ -28,6 +31,7 @@
             margin-left: -1px;
             text-align: center;
             line-height: 44px;
+            cursor: pointer;
 
 
             &:first-child {
@@ -42,6 +46,15 @@
             &.active {
                 background: $cLightGrey;
                 font-family: fBold;
+                box-shadow: inset 0 4px 0 0 rgba(0, 0, 0, .2);
+            }
+
+            &:hover {
+                box-shadow: 0 2px 4px 1 rgab(51, 51, 51, .2)
+            }
+
+            &:focus {
+                border: 5px solid #53cbed;
             }
         }
 
