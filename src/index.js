@@ -8,20 +8,23 @@ import Container from './Container'
 import Picker from './Picker'
 import Intro from './Intro'
 import About from './About'
-import Loading from './Loading'
 
 class Renderer extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            picker: true,
-            intro: true,
-            about: false,
+            intro: true, // landing page
+            picker: true, // side menu
+            pickerIntro: true, // instructions for picker
+            loading: false, // appears after picker create button clicked and before Schemes
+            schemes: false,
+
+            about: false, // application/team information that overlays whole app
+
             standard: 'WCAG AA',
             hue: '5°',
             shade: '5%',
-            loading: false
         }
     }
 
@@ -57,8 +60,18 @@ class Renderer extends React.Component {
         this.setState({shade: val})
     }
 
-    openLoading() {
-        this.setState({loading: true})
+    createSchemes() {
+        this.setState({
+            pickerIntro: false,
+            picker: false,
+            loading: true
+        })
+        setTimeout(() => {
+            this.setState({
+                loading: false,
+                schemes: true
+            })
+        }, 1500)
     }
 
 
@@ -75,7 +88,8 @@ class Renderer extends React.Component {
                     changeStandard={this.changeStandard.bind(this)}
                     changeHue={this.changeHue.bind(this)}
                     changeShade={this.changeShade.bind(this)}
-                    openLoading={this.openLoading.bind(this)}/>
+                    createSchemes={this.createSchemes.bind(this)}
+                />
 
                 {this.state.intro ?
                     <Intro
@@ -86,9 +100,6 @@ class Renderer extends React.Component {
                     <About
                         closeAbout={this.closeAbout.bind(this)}/>
                     : null}
-
-                {this.state.loading ?
-                    <Loading /> : null}
 
             </div>
         );

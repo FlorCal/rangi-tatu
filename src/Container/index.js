@@ -1,19 +1,24 @@
+//libraries
 import React from 'react'
 
+//components
 import Header from '../Header'
 import PickerIntro from '../PickerIntro'
+import Loading from '../Loading'
 import Schemes from '../Schemes'
 
 
 class ContainerComponent extends React.Component {
 
     render() {
-
+        console.log(this.props);
         return (
             <div className='ContainerComponent'>
                 <Header {...this.props} />
-                {!this.props.closeIntro ? <PickerIntro /> : null}
-                <Schemes {...this.props} />
+                {this.props.pickerIntro ? <PickerIntro /> : null}
+                {this.props.loading ? <Loading /> : null}
+                {this.props.schemes ? <Schemes {...this.props}
+                /> : null}
             </div>
         );
     }

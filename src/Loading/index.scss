@@ -1,9 +1,6 @@
 .LoadingComponent {
-    position: fixed;
-    background: $cOffWhite;
-    height: 100vh;
+
+    background: red;
+    height: calc(100vh - 100px);
     width: 100vw;
-    top: 0;
-    left: 0;
-    // display: grid;
 }

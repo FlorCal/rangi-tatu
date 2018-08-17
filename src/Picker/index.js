@@ -51,8 +51,11 @@ class PickerComponent extends React.Component {
                     click={this.props.changeShade}/>
 
 
-                <div className='button' onClick={this.props.openLoading}>
-                    <Button passClass='title' title='Create'/>
+                <div className='button'>
+                    <Button
+                        click={this.props.createSchemes}
+                        passClass='title'
+                        title='Create'/>
                 </div>
 
             </div>
