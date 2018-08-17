@@ -4,5 +4,12 @@
     width: 100vw;
     top: 0;
     left: 0;
-    background: rgba(51,51,51,.9);
+    background: rgba(51, 51, 51, .9);
+    text-align: center;
+    font-size: $sFontbig;
+    color: $cWhite;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
