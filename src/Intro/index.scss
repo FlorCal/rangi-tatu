@@ -39,4 +39,11 @@
             margin: 0 8px 0 6px;
         }
     }
+
+    .ButtonComponent {
+        grid-area: ButtonComponent;
+        width: 200px;
+        align-self: end;
+        justify-self: center;
+    }
 }

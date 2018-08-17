@@ -16,7 +16,7 @@ class Renderer extends React.Component {
         super(props);
         this.state = {
             picker: true,
-            intro: false,
+            intro: true,
             about: false,
             standard: 'WCAG AA',
             hue: '5°',
