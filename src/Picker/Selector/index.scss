@@ -20,18 +20,19 @@
     .wrapper {
         grid-area: wrapper;
         height: 44px;
-        // padding-top: 20px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
 
 
-        div {
+        button {
             overflow: hidden;
             border: 1px solid #666;
             font-family: fRegular;
+            font-size: $sFont;
             margin-left: -1px;
             text-align: center;
             line-height: 44px;
+            outline: none;
             cursor: pointer;
 
 
@@ -44,17 +45,21 @@
                 border-top-right-radius: 3px;
                 border-bottom-right-radius: 3px;
             }
+
             &.active {
                 background: $cLightGrey;
                 font-family: fBold;
                 box-shadow: inset 0 4px 0 0 rgba(0, 0, 0, .2);
             }
 
-            &:hover {
-                box-shadow: 0 2px 4px 1 rgab(51, 51, 51, .2)
+            &:hover:not(.active) {
+                box-shadow: 0 2px 4px 1px rgba(51, 51, 51, .2);
+                background: #f9f9fa;
+                z-index: 1;
             }
 
-            &:focus {
+
+            &:focus:not(.active) {
                 border: 5px solid #53cbed;
             }
         }
