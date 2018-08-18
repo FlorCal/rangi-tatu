@@ -1,6 +1,21 @@
 .LoadingComponent {
-
-    background: red;
+    background: $cOffWhite;
     height: calc(100vh - 100px);
     width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 380px 1fr;
+    grid-template-rows: 1fr 140px 120px 1fr;
+    grid-template-areas:
+    '. . .'
+    '. bowl .'
+    '. stir .'
+    '. . .';
+
+    .bowl {
+        grid-area: bowl;
+    }
+
+    .stir {
+        grid-area: stir;
+    }
 }
