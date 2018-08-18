@@ -60,7 +60,8 @@
 
 
             &:focus:not(.active) {
-                outline: 5px solid #53cbed;
+                outline:  5px solid #53cbed;
+                z-index: 1;
             }
         }
 

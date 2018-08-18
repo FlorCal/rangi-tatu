@@ -11,7 +11,6 @@ import Schemes from '../Schemes'
 class ContainerComponent extends React.Component {
 
     render() {
-        console.log(this.props);
         return (
             <div className='ContainerComponent'>
                 <Header {...this.props} />
