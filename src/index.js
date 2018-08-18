@@ -66,12 +66,12 @@ class Renderer extends React.Component {
             picker: false,
             loading: true
         })
-        // setTimeout(() => {
-        //     this.setState({
-        //         loading: false,
-        //         schemes: true
-        //     })
-        // }, 500)
+        setTimeout(() => {
+            this.setState({
+                loading: false,
+                schemes: true
+            })
+        }, 500)
     }
 
 
