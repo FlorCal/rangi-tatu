@@ -62,6 +62,10 @@
             grid-area: madeBy;
             font-size: 18px;
             align-self: end;
+
+            span {
+                text-decoration: underline;
+            }
         }
     }
 } // AboutComponent

@@ -27,7 +27,7 @@ class Renderer extends React.Component {
             shade: '5%',
         }
     }
-
+    // actions
     closePicker() {
         this.setState({picker: false})
     }
