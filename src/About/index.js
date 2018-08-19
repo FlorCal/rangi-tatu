@@ -4,7 +4,7 @@ class AboutComponent extends React.Component {
     render() {
         return (
             <div className='AboutComponent'>
-                <div onClick={this.props.closeAbout}>Close</div>
+                <div className='button' onClick={this.props.closeAbout}>Take me back</div>
             </div>
         )
     }
