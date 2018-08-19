@@ -16,4 +16,52 @@
     '. . . . .'
     '. . about . .'
     '. . . . .';
+
+    .button {
+        grid-area: button;
+        height: 48px;
+        width: 140px;
+        border-radius: 4px;
+        justify-self: center;
+        font-size: $sFont;
+        font-family: fRegular;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .about {
+        grid-area: about;
+        display: grid;
+        grid-template-rows: 36px 120px 250px 64px;
+        grid-template-areas:
+        'title'
+        'info'
+        'img'
+        'madeBy';
+
+        .title {
+            grid-area: title;
+            font-size: 40px;
+            font-family: fBold;
+        }
+
+        .info {
+            grid-template: info;
+            font-size: 18px;
+            line-height: 28px;
+            align-self: end;
+        }
+
+        img {
+            grid-area: img;
+            align-self: end;
+            justify-self: center;
+        }
+
+        .madeBy {
+            grid-area: madeBy;
+            font-size: 18px;
+            align-self: end;
+        }
+    }
 } // AboutComponent

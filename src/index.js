@@ -98,7 +98,8 @@ class Renderer extends React.Component {
 
                 { this.state.about ?
                     <About
-                        closeAbout={this.closeAbout.bind(this)}/>
+                        closeAbout=
+                            {this.closeAbout.bind(this)} />
                     : null}
 
             </div>
