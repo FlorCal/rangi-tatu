@@ -27,6 +27,14 @@ class Renderer extends React.Component {
             shade: '5%',
         }
     }
+
+    // lifecycle
+    componentDidMount(){
+        this.closeIntro()
+        this.createSchemes()
+    }
+
+
     // actions
     closePicker() {
         this.setState({picker: false})
