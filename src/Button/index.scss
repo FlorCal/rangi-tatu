@@ -12,23 +12,58 @@
     font-family: fRegular;
     outline: none;
 
+    // &:hover {
+    //     cursor: pointer;
+    //     background-image: linear-gradient(to right, #4f5a65, #4f5a65, #BC4CC8 , #CB4E52, #789B73, #6753C4, #6753C4);
+    //     background-size:  500%;
+    //     animation: 1000ms backgroundSlide;
+    //     animation-iteration-count: 1;
+    //     animation-fill-mode: forwards;
+    //
+    //     @keyframes backgroundSlide {
+    //         0% {
+    //             background-position-x: 0;
+    //         }
+    //         100% {
+    //             background-position-x: 100%;
+    //         }
+    //     }
+    //
+    // }
+
     &:hover {
         cursor: pointer;
-        background-image: linear-gradient(to right, #4f5a65, #4f5a65, #BC4CC8 , #CB4E52, #789B73, #6753C4, #6753C4);
-        background-size:  500%;
-        animation: 1000ms backgroundSlide;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
+        animation: 2500ms backgroundColor infinite;
 
-        @keyframes backgroundSlide {
+        @keyframes backgroundColor {
             0% {
-                background-position-x: 0;
+                background-color: #2777C6;
+            }
+            20% {
+                background-color: #22B8C8;
+            }
+            30% {
+                background-color: #22D5B9;
+            }
+            40% {
+                background-color: #47D530;
+                }
+            50% {
+                background-color: #CEC821;
+            }
+            60% {
+                background-color: #D3851F;
+            }
+            70% {
+                background-color: #D5351F;
+            }
+            80% {
+                background-color: #C721D4;
             }
             100% {
-                background-position-x: 100%;
+                background-color: #8447D5;
             }
         }
-
     }
 
     &:active{
