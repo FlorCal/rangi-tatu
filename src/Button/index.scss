@@ -5,6 +5,8 @@
     box-shadow: inset 0 -6px 0 0 rgba(0, 0, 0, .3),
     2px 6px 2px 1px rgba(51, 51, 51, .1);
     background: #4f5a65;
+
+
     color: $cWhite;
     font-size: $sFontMedium;
     font-family: fRegular;
@@ -12,8 +14,21 @@
 
     &:hover {
         cursor: pointer;
-        transition: background 1s ease;
-        background: #654ecc;
+        background-image: linear-gradient(to right, #4f5a65, #4f5a65, #BC4CC8 , #CB4E52, #789B73, #6753C4, #6753C4);
+        background-size:  500%;
+        animation: 1000ms backgroundSlide;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+        @keyframes backgroundSlide {
+            0% {
+                background-position-x: 0;
+            }
+            100% {
+                background-position-x: 100%;
+            }
+        }
+
     }
 
     &:active{
