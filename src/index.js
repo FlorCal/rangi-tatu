@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import './index.scss'
+import constants from '../constants'
 
 //componenets
 import Container from './Container'
@@ -79,7 +80,7 @@ class Renderer extends React.Component {
                 loading: false,
                 schemes: true
             })
-        }, 500)
+        }, constants.createSchemesDelay)
     }
 
 
