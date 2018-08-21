@@ -29,10 +29,10 @@ class Renderer extends React.Component {
     }
 
     // lifecycle
-    componentDidMount(){
-        this.closeIntro()
-        this.createSchemes()
-    }
+    // componentDidMount(){
+    //     this.closeIntro()
+    //     this.createSchemes()
+    // }
 
 
     // actions
