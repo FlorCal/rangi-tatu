@@ -1,22 +1,25 @@
+// libraries
 import React from 'react'
 
+//componenets
 import Scheme from './Scheme'
 
 class SchemesComponent extends React.Component {
 
-    schemes() {
+    // plots
+    plotSchemes() {
         let out = []
-        for(let i = 0; i < 10; i++) {
-            out.push(Scheme)
+        for(let i = 0; i < 6; i++) {
+            out.push(<Scheme passKey={i}/>)
         }
-        return Scheme
+        return out
     }
 
     render() {
         return(
             <div className='SchemesComponent'>
                 <div className='schemes'>
-                    <Scheme />
+                    {this.plotSchemes()}
                 </div>
             </div>
         )

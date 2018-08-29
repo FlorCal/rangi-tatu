@@ -1,8 +1,8 @@
 .SchemeComponent {
     height: 240px;
-    width: 420px;
+    // width: 420px;
     display: grid;
-    grid-template-columns: repeat(3, 139.7px);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 85px 95px 60px;
 
     .color1 {

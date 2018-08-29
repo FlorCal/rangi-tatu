@@ -3,7 +3,8 @@ import React from 'react'
 class SchemeComponent extends React.Component {
     render() {
         return(
-            <div className='SchemeComponent'>
+            <div key={this.props.passKey ? this.props.passKey : null}
+                className='SchemeComponent'>
                 <div className='color1'></div>
                 <div className='color2'></div>
                 <div className='color3'></div>
