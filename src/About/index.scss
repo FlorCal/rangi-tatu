@@ -32,7 +32,7 @@
     .about {
         grid-area: about;
         display: grid;
-        grid-template-rows: 36px 120px 250px 64px;
+        grid-template-rows: 36px 120px 250px 92px;
         grid-template-areas:
         'title'
         'info'
@@ -62,6 +62,8 @@
             grid-area: madeBy;
             font-size: 18px;
             align-self: end;
+            line-height: 28px;
+            padding-top: 28px;
 
             span {
                 text-decoration: underline;
