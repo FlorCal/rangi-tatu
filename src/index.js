@@ -23,6 +23,7 @@ class Renderer extends React.Component {
 
             about: false, // application/team information that overlays whole app
 
+            baseColor: '',
             standard: 'WCAG AA',
             hue: '5°',
             shade: '5%',
@@ -83,6 +84,9 @@ class Renderer extends React.Component {
         }, constants.createSchemesDelay)
     }
 
+    baseColorChange(e) {
+        this.setState({baseColor: e.target.value})
+    }
 
     render() {
 
@@ -98,6 +102,7 @@ class Renderer extends React.Component {
                     changeHue={this.changeHue.bind(this)}
                     changeShade={this.changeShade.bind(this)}
                     createSchemes={this.createSchemes.bind(this)}
+                    baseColorChange={this.baseColorChange.bind(this)}
                 />
 
                 {this.state.intro ?

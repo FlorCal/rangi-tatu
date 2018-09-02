@@ -26,7 +26,9 @@ class PickerComponent extends React.Component {
 
                 <div className='DropHex'>
                     <div className='title' >Drop in a hex code</div>
-                    <input className='wrapper' type='text' placeholder='#FFFFFF' maxLength='7'/>
+                    <input className='wrapper' type='text' placeholder='#FFFFFF' maxLength='7'
+                        value={this.props.baseColor}
+                        onChange={this.props.baseColorChange.bind(this)}/>
                 </div>
 
                 <Selector
