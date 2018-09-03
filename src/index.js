@@ -19,7 +19,7 @@ class Renderer extends React.Component {
             picker: true, // side menu
             pickerIntro: true, // instructions for picker
             loading: false, // appears after picker create button clicked and before Schemes
-            schemes: false,
+            schemes: false, // schemes page appear  or not appear
 
             about: false, // application/team information that overlays whole app
 
@@ -27,6 +27,7 @@ class Renderer extends React.Component {
             standard: 'WCAG AA',
             hue: '5°',
             shade: '5%',
+            schemesCombinations: [] // color combinations
         }
     }
 
@@ -35,6 +36,26 @@ class Renderer extends React.Component {
     //     this.closeIntro()
     //     this.createSchemes()
     // }
+
+    // accepts: base degree and complimantary angle degree
+    // outputs: 2 complimantary color degrees
+    hslComplimenatry(baseD, compD) {
+        if(compD <= 0) return null
+
+        let firstComp = baseD + 180 - compD
+        if(firstComp < 0) firstComp = firstComp + 360
+        if(firstComp > 360) firstComp = firstComp - 360
+
+        let secondComp = baseD -180 + compD
+        if(secondComp < 0) secondComp = secondComp + 360
+        if(secondComp > 360) secondComp = secondComp - 360
+
+        return [firstComp, secondComp]
+    }
+
+    generateCombinations() {
+        // this function will end with a set state
+    }
 
 
     // actions
@@ -71,6 +92,7 @@ class Renderer extends React.Component {
     }
 
     createSchemes() {
+        this.generateCombinations()
         this.setState({
             pickerIntro: false,
             picker: false,
