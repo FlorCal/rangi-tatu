@@ -27,6 +27,15 @@ class Renderer extends React.Component {
             standard: 'WCAG AA',
             hue: '5°',
             shade: '5%',
+            /*
+            [ //combinations
+              [ // scheme
+                [235,50,20], // color1 [hue, saturation, lightness]
+                [230,30,40], // color2
+                // ..., ..., ...
+              ] // , ..., ..., ...
+            ]
+            */    
             schemesCombinations: [] // color combinations
         }
     }
