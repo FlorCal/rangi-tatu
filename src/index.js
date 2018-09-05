@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import convert from 'color-convert'
 
 import './index.scss'
 import constants from '../constants'
@@ -35,20 +36,20 @@ class Renderer extends React.Component {
                 // ..., ..., ...
               ] // , ..., ..., ...
             ]
-            */    
+            */
             schemesCombinations: [] // color combinations
         }
     }
 
     // lifecycle
-    // componentDidMount(){
-    //     this.closeIntro()
-    //     this.createSchemes()
-    // }
+    componentDidMount(){
+        this.closeIntro()
+        // this.createSchemes()
+    }
 
     // accepts: base degree and complimantary angle degree
     // outputs: 2 complimantary color degrees
-    hslComplimenatry(baseD, compD) {
+    hslComplimentary(baseD, compD) {
         if(compD <= 0) return null
 
         let firstComp = baseD + 180 - compD
@@ -63,7 +64,19 @@ class Renderer extends React.Component {
     }
 
     generateCombinations() {
-        // this function will end with a set state
+        let newSchemesCombinations = []
+        let baseHsl = convert.hex.hsl(this.state.baseColor)
+        for(let d = 5; d <= 90; d += parseInt(this.state.hue)) {
+            let complimentaryColors = this.hslComplimentary(baseHsl[0], d)
+            newSchemesCombinations.push([
+                [complimentaryColors[0], 50, 50],
+                [complimentaryColors[1], 50, 50]
+            ])
+        }
+        this.setState({schemesCombinations: newSchemesCombinations},
+            () =>{
+                console.log(this.state.schemesCombinations)
+            })
     }
 
 
