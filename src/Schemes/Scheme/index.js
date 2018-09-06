@@ -1,15 +1,28 @@
 import React from 'react'
+import convert from 'color-convert'
 
 class SchemeComponent extends React.Component {
+    plotHexs() {
+        let hexArr = []
+        this.props.colors.forEach(color => {
+            hexArr.push('#' + convert.hsl.hex(color))
+        })
+        return hexArr.join(' / ')
+    }
     render() {
         return(
-            <div key={this.props.passKey ? this.props.passKey : null}
-                className='SchemeComponent'>
-                <div className='color1'></div>
-                <div className='color2'></div>
-                <div className='color3'></div>
+            <div className='SchemeComponent'>
+
+                <div className='colors'>
+                    {this.props.colors.map((color, i) =>(
+                        <div key={i} style={{
+                            background: `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`
+                        }}/>
+                    ))}
+                </div>
+
                 <div className='name'>Name</div>
-                <div className='hue'>#000000  /  #000000  /  #000000</div>
+                <div className='hue'>{this.plotHexs()}</div>
                 <div className='copy'>Copy</div>
 
             </div>

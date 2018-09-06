@@ -6,20 +6,14 @@ import Scheme from './Scheme'
 
 class SchemesComponent extends React.Component {
 
-    // plots
-    plotSchemes() {
-        let out = []
-        for(let i = 0; i < 6; i++) {
-            out.push(<Scheme passKey={i}/>)
-        }
-        return out
-    }
 
     render() {
         return(
             <div className='SchemesComponent'>
                 <div className='schemes'>
-                    {this.plotSchemes()}
+                    {this.props.schemesCombinations.map((colors, i) =>(
+                        <Scheme colors={colors} key={i} />
+                    ))}
                 </div>
             </div>
         )
