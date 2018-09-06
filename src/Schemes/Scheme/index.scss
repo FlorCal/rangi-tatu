@@ -2,28 +2,15 @@
     height: 240px;
     // width: 420px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: 85px 95px 60px;
 
-    .color1 {
+    .colors {
         grid-area: 1 / 1 / span 3;
-        background: #c3c2c2;
-        border-bottom-left-radius: 4px;
-        border-top-left-radius: 4px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+        grid-template-rows: 1fr;
     }
-
-    .color2 {
-        grid-area: 1 / 2 / span 3;
-        background: #ababab;
-    }
-
-    .color3 {
-        grid-area: 1 / 3 / span 3;
-        background: #d3d3d3;
-        border-bottom-right-radius: 4px;
-        border-top-right-radius: 4px;
-    }
-
     .name {
         grid-area: 1 / 1 / auto / span 3;
         font-size: 48px;
