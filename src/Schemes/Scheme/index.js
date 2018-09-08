@@ -1,6 +1,8 @@
 import React from 'react'
 import convert from 'color-convert'
 
+import createRandomNames from '../../app/data/name.js'
+
 class SchemeComponent extends React.Component {
     plotHexs() {
         let hexArr = []
@@ -21,7 +23,7 @@ class SchemeComponent extends React.Component {
                     ))}
                 </div>
 
-                <div className='name'>Name</div>
+                <div className='name'>{createRandomNames()}</div>
                 <div className='hue'>{this.plotHexs()}</div>
                 <div className='copy'>Copy</div>
 
