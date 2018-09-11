@@ -12,6 +12,9 @@ class SchemeComponent extends React.Component {
         return hexArr.join(' / ')
     }
     render() {
+
+        let baseColor = this.props.hexColor
+        console.log(baseColor)
         return(
             <div className='SchemeComponent'>
 
@@ -23,9 +26,9 @@ class SchemeComponent extends React.Component {
                     ))}
                 </div>
 
-                <div className='name'>{createRandomNames()}</div>
-                <div className='hue'>{this.plotHexs()}</div>
-                <div className='copy'>Copy</div>
+                <div className='name' style={{color:baseColor}}>{createRandomNames()}</div>
+                <div className='hue' style={{color:baseColor}}>{this.plotHexs()}</div>
+                <div className='copy' style={{color:baseColor}}>Copy</div>
 
             </div>
         )
