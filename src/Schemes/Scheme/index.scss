@@ -1,9 +1,9 @@
 .SchemeComponent {
     height: 240px;
-    // width: 420px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 85px 95px 60px;
+
 
     .colors {
         grid-area: 1 / 1 / span 3;
@@ -11,7 +11,7 @@
         grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
         grid-template-rows: 1fr;
     }
-    
+
     .name {
         grid-area: 1 / 1 / auto / span 3;
         font-size: 48px;
