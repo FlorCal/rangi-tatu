@@ -6,13 +6,17 @@ import Scheme from './Scheme'
 
 class SchemesComponent extends React.Component {
 
-
     render() {
+
+        let baseColor = this.props.baseColor && this.props.baseColor.length >= 3 ? '#' + this.props.baseColor : null
+
+
+
         return(
-            <div className='SchemesComponent'>
+            <div className='SchemesComponent' style={{background: baseColor}}>
                 <div className='schemes'>
-                    {this.props.schemesCombinations.map((colors, i) =>(
-                        <Scheme colors={colors} key={i} />
+                    {this.props.schemesCombinations.map((colors, i) => (
+                        <Scheme hexColor={baseColor} colors={colors} key={i} />
                     ))}
                 </div>
             </div>

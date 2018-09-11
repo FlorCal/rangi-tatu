@@ -11,6 +11,7 @@
         grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
         grid-template-rows: 1fr;
     }
+    
     .name {
         grid-area: 1 / 1 / auto / span 3;
         font-size: 48px;
