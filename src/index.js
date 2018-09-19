@@ -48,7 +48,7 @@ class Renderer extends React.Component {
     }
 
     // accepts: base degree and complimantary angle degree
-    // outputs: 2 complimantary color degrees
+    // outputs: 2 complimantary color degrees [firstComp, secondComp]
     hslComplimentary(baseD, compD) {
         if(compD <= 0) return null
 
@@ -66,20 +66,24 @@ class Renderer extends React.Component {
     generateCombinations() {
         let newSchemesCombinations = []
         let baseHsl = convert.hex.hsl(this.state.baseColor)
-        for(let d = 5; d <= 90; d += parseInt(this.state.hue)) {
-            let complimentaryColors = this.hslComplimentary(baseHsl[0], d)
-            newSchemesCombinations.push([
-                [complimentaryColors[0], 50, 50],
-                [complimentaryColors[1], 50, 50]
-            ])
+        let hue = parseInt(this.state.hue)
+
+        for(let d = 5; d <= 90; d += hue) {
+            for(let dd = d + hue; dd <= 90; dd += hue){
+                let complimentaryColors1 = this.hslComplimentary(baseHsl[0], d)
+                let complimentaryColors2 = this.hslComplimentary(baseHsl[0], dd)
+
+                newSchemesCombinations.push([
+                    [complimentaryColors1[0], 50, 50],
+                    [complimentaryColors2[0], 50, 50],
+                    [complimentaryColors2[1], 50, 50],
+                    [complimentaryColors1[1], 50, 50]
+                ])
+            }
         }
-        this.setState({schemesCombinations: newSchemesCombinations},
-            () =>{
-                console.log(this.state.schemesCombinations)
-            })
+        this.setState({schemesCombinations: newSchemesCombinations})
     }
-
-
+    
     // actions
     closePicker() {
         this.setState({picker: false})
@@ -102,15 +106,15 @@ class Renderer extends React.Component {
     }
 
     changeStandard(val) {
-        this.setState({standard: val})
+        this.setState({standard: val}, this.generateCombinations )
     }
 
     changeHue(val) {
-        this.setState({hue: val})
+        this.setState({hue: val}, this.generateCombinations )
     }
 
     changeShade(val) {
-        this.setState({shade: val})
+        this.setState({shade: val}, this.generateCombinations )
     }
 
     createSchemes() {
@@ -129,7 +133,7 @@ class Renderer extends React.Component {
     }
 
     baseColorChange(e) {
-        this.setState({baseColor: e.target.value})
+        this.setState({baseColor: e.target.value}, this.generateCombinations)
     }
 
     render() {
