@@ -661,7 +661,7 @@ let attributes = [
 let createRandomNames = () => {
     let randomAnimal = animals[Math.floor(Math.random() * animals.length)]
     let randomAttribute = attributes[Math.floor(Math.random() * attributes.length)]
-    return `${randomAnimal} ${randomAttribute}`
+    return `${randomAttribute} ${randomAnimal}`
 }
 
 export default createRandomNames
