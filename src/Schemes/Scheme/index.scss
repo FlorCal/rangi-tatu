@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 85px 95px 60px;
+    padding-top: 5px;
 
 
     .colors {
@@ -16,12 +17,13 @@
         grid-area: 1 / 1 / auto / span 3;
         font-size: 48px;
         margin-left: 24px;
-        align-self: end;
+        margin-top: auto;
+        padding-top: 20px;
     }
 
     .hue {
         grid-area: 2 / 1 / auto / span 3;
-        align-self: center;
+        align-self: end;
         margin-left: 24px;
         padding-bottom: 40px;
     }

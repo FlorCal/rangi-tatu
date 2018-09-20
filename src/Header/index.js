@@ -10,15 +10,15 @@ class HeaderComponent extends React.Component {
 
         return (
             <div className='HeaderComponent'>
-                <div className='picker' onClick={this.props.openPicker}>
-                    <img src={picker} />
-                    <span>Picker</span>
+                <div className='picker'>
+                    <img onClick={this.props.openPicker} src={picker} />
+                    <span onClick={this.props.openPicker} >Picker</span>
                 </div>
                 <h1 className='title'>
                 Rangi Tatu
                 </h1>
-                <a className='q' onClick={this.props.openAbout}>
-                    <img src={question} />
+                <a className='q'>
+                    <img onClick={this.props.openAbout} src={question} />
                 </a>
             </div>
         )

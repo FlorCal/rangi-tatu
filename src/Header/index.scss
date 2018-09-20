@@ -11,15 +11,17 @@
         grid-area: picker;
         align-self: center;
         margin-left: 50px;
-        cursor: pointer;
+
 
         img {
             padding-right: 10px;
+            cursor: pointer;
         }
 
         span {
             position: absolute;
             border-bottom: 2px solid;
+            cursor: pointer;
         }
     }
 
@@ -35,7 +37,10 @@
         align-self: center;
         text-align: end;
         margin-right: 62px;
-        cursor: pointer;
+
+        img {
+            cursor: pointer;
+        }
     }
 
 }
