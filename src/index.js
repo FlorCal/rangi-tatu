@@ -24,7 +24,7 @@ class Renderer extends React.Component {
 
             about: false, // application/team information that overlays whole app
 
-            baseColor: '',
+            baseColor: '', // will always start with #
             standard: 'WCAG AA',
             hue: '20°',
             shade: '10%',
@@ -65,7 +65,7 @@ class Renderer extends React.Component {
 
     generateCombinations() {
         let newSchemesCombinations = []
-        let baseHsl = convert.hex.hsl(this.state.baseColor)
+        let baseHsl = convert.hex.hsl(this.state.baseColor.replace('#', ''))
         let hue = parseInt(this.state.hue)
 
         for(let d = 5; d <= 90; d += hue) { // primary hue step
@@ -140,7 +140,8 @@ class Renderer extends React.Component {
     }
 
     baseColorChange(e) {
-        this.setState({baseColor: e.target.value}, this.generateCombinations)
+        let val = e.target.value.startsWith('#') ? e.target.value : '#' + e.target.value
+        this.setState({baseColor: val}, this.generateCombinations)
     }
 
     render() {

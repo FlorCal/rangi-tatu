@@ -7,7 +7,7 @@ class SchemeComponent extends React.Component {
     plotHexs() {
         let hexArr = []
         this.props.colors.forEach(color => {
-            hexArr.push('#' + convert.hsl.hex(color))
+            hexArr.push(convert.hsl.hex(color))
         })
         return hexArr.join(' / ')
     }
