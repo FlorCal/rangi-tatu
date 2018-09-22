@@ -63,10 +63,13 @@ class Renderer extends React.Component {
         return [firstComp, secondComp]
     }
 
+
+
     generateCombinations() {
         let newSchemesCombinations = []
         let baseHsl = convert.hex.hsl(this.state.baseColor.replace('#', ''))
         let hue = parseInt(this.state.hue)
+        let count = 0
 
         for(let d = 5; d <= 90; d += hue) { // primary hue step
             for(let dd = d + hue; dd <= 90; dd += hue){ // secondary hue step
@@ -74,20 +77,27 @@ class Renderer extends React.Component {
                 let complimentaryColors2 = this.hslComplimentary(baseHsl[0], dd)
 
                 let shade = parseInt(this.state.shade)
+                let min = 10
+                let max = 90
 
                 // FIXME: 15% shade actually stops at 90 and never reaches 100
                 // TODO: we need probably limits for shade
-                for(let l = 0; l <= 100; l += shade){
-                    newSchemesCombinations.push([
-                        [complimentaryColors1[0], 50, l],
-                        [complimentaryColors2[0], 50, l],
-                        [complimentaryColors2[1], 50, l],
-                        [complimentaryColors1[1], 50, l]
-                    ])
+                for(let l = min; l <= max; l += shade){
+                    for(let s = min; s <= max; s += 10){
+                        count += 1
+                        newSchemesCombinations.push([
+                            [complimentaryColors1[0], s, l],
+                            [complimentaryColors2[0], s, l],
+                            [complimentaryColors2[1], s, l],
+                            [complimentaryColors1[1], s, l]
+                        ])
+                    }
                 } // stepping through shade/lightness
 
             }
         }
+
+        console.log(count);
         this.setState({schemesCombinations: newSchemesCombinations})
     }
 

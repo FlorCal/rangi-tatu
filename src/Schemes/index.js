@@ -8,7 +8,7 @@ class SchemesComponent extends React.Component {
 
     render() {
 
-        let baseColor = this.props.baseColor && this.props.baseColor.length >= 3 ? '#' + this.props.baseColor : null
+        let baseColor = this.props.baseColor && this.props.baseColor.length >= 3 ? this.props.baseColor : null
 
 
 
