@@ -77,13 +77,11 @@ class Renderer extends React.Component {
                 let complimentaryColors2 = this.hslComplimentary(baseHsl[0], dd)
 
                 let shade = parseInt(this.state.shade)
-                let min = 10
-                let max = 90
 
                 // FIXME: 15% shade actually stops at 90 and never reaches 100
                 // TODO: we need probably limits for shade
-                for(let l = min; l <= max; l += shade){
-                    for(let s = min; s <= max; s += 10){
+                for(let l = constants.minShadeLightStep; l <= constants.maxShadeLightStep; l += shade){
+                    for(let s = constants.minSaturationStep; s <= constants.maxSaturationStep; s += 10){
                         count += 1
                         newSchemesCombinations.push([
                             [complimentaryColors1[0], s, l],
