@@ -19,6 +19,7 @@
   "homepage": "https://github.com/FlorCal/rangi-tatu#readme",
   "dependencies": {
     "color-convert": "^1.9.3",
+    "get-contrast": "^2.0.0",
     "lodash": "^4.17.10",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
