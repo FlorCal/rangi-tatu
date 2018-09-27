@@ -50,11 +50,11 @@ class Renderer extends React.Component {
     // accepts: base degree and complimantary angle degree
     // outputs: 2 complimantary color degrees [firstComp, secondComp]
     hslComplimentary(baseD, compD) {
-        if(compD <= 0) return null
+        if (compD <= 0) return null
 
         let firstComp = baseD + 180 - compD
-        if(firstComp < 0) firstComp = firstComp + 360
-        if(firstComp > 360) firstComp = firstComp - 360
+        if (firstComp < 0) firstComp = firstComp + 360
+        if (firstComp > 360) firstComp = firstComp - 360
 
         let secondComp = baseD -180 + compD
         if(secondComp < 0) secondComp = secondComp + 360
@@ -68,10 +68,10 @@ class Renderer extends React.Component {
         let passWcag = false
 
         colorScheme.forEach(color => {
-            let hslbackground = `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`
-            let colorContrast = contrast.score(this.state.baseColor, hslbackground) // get-contrast library checks for AAA & AA contrast
+            let hslBackground = `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`
+            let colorContrast = contrast.score(this.state.baseColor, hslBackground) // get-contrast library checks for AAA & AA contrast
 
-            if(colorContrast === wcagStandard || colorContrast === 'AAA') {
+            if (colorContrast === wcagStandard || colorContrast === 'AAA') {
                 passWcag = true
             }
         })// stepping through colors in colorScheme
@@ -96,8 +96,8 @@ class Renderer extends React.Component {
 
                 // FIXME: 15% shade actually stops at 90 and never reaches 100
 
-                for(let l = constants.minShadeLightStep; l <= constants.maxShadeLightStep; l += shade){ // shade/light step by 10°
-                    for(let s = constants.minSaturationStep; s <= constants.maxSaturationStep; s += 10){ // saturation step by 10%
+                for (let l = constants.minShadeLightStep; l <= constants.maxShadeLightStep; l += shade) { // shade/light step by 10°
+                    for (let s = constants.minSaturationStep; s <= constants.maxSaturationStep; s += 10) { // saturation step by 10%
                         count1 += 1
 
                         let colorScheme = [
