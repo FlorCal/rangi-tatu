@@ -13,6 +13,8 @@ class PickerComponent extends React.Component {
 
     render() {
 
+        let buttonPassClass = 'title' + (this.props.baseColor.length < 4 ? ' restrict' : '')
+
         return (
             <div className={'PickerComponent' + (this.props.picker ? ' open' : '' ) }>
 
@@ -56,7 +58,7 @@ class PickerComponent extends React.Component {
                 <div className='button'>
                     <Button
                         click={this.props.createSchemes}
-                        passClass='title'
+                        passClass={buttonPassClass}
                         title='Create'/>
                 </div>
 

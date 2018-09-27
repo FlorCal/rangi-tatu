@@ -52,4 +52,9 @@ body {
     .fBlack {
         font-family: fBold;
     }
+
+    .restrict {
+        pointer-events: none;
+        opacity: 0.5;
+    }
 }
