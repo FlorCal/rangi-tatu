@@ -80,7 +80,7 @@ class Renderer extends React.Component {
     } // checks if scheme colors are wcag compliant
 
 
-    generateCombinations() {
+    generateCombinations(callback) {
         let newSchemesCombinations = []
         let baseHsl = convert.hex.hsl(this.state.baseColor.replace('#', ''))
         let hue = parseInt(this.state.hue)
@@ -126,7 +126,7 @@ class Renderer extends React.Component {
 
         console.log(count1);
         console.log(count2);
-        this.setState({schemesCombinations: newSchemesCombinations})
+        this.setState({schemesCombinations: newSchemesCombinations}, callback)
     } //
 
     // actions
@@ -163,18 +163,22 @@ class Renderer extends React.Component {
     }
 
     createSchemes() {
-        this.generateCombinations()
+
         this.setState({
             pickerIntro: false,
             picker: false,
             loading: true
         })
+
+        // callback func created to wait for schemes to be generated before loading page clears
         setTimeout(() => {
-            this.setState({
-                loading: false,
-                schemes: true
-            })
-        }, constants.createSchemesDelay)
+            this.generateCombinations(() =>
+                this.setState({
+                    loading: false,
+                    schemes: true
+                })
+            )
+        }, 500)
     }
 
     baseColorChange(e) {
