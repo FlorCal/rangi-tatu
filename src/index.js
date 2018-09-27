@@ -96,8 +96,14 @@ class Renderer extends React.Component {
 
                 // FIXME: 15% shade actually stops at 90 and never reaches 100
 
-                for (let l = constants.minShadeLightStep; l <= constants.maxShadeLightStep; l += shade) { // shade/light step by 10°
-                    for (let s = constants.minSaturationStep; s <= constants.maxSaturationStep; s += 10) { // saturation step by 10%
+                for (let l = constants.minShadeLightStep;
+                    l <= constants.maxShadeLightStep;
+                    l += shade) { // shade/light step by 10°
+
+                    for (let s = constants.minSaturationStep;
+                        s <= constants.maxSaturationStep;
+                        s += constants.saturationStep) { // saturation step by 10%
+
                         count1 += 1
 
                         let colorScheme = [
