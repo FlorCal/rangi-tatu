@@ -64,20 +64,20 @@ class Renderer extends React.Component {
     }
 
     isSchemeWcagCompliant(colorScheme) {
-        let wcagStandard = this.state.standard.split(' ')[1]
+        let wcagStandard = this.state.standard.split(' ')[1] // ['WCAG', 'AA'] or ['WCAG', 'AAA'] -> 'AA' 0r 'AAA'
         let passWcag = false
 
         colorScheme.forEach(color => {
             let hslbackground = `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`
-            let colorContrast = contrast.score(this.state.baseColor, hslbackground) // checks for AAA & AA contrast
-
+            let colorContrast = contrast.score(this.state.baseColor, hslbackground) // get-contrast library checks for AAA & AA contrast
 
             if(colorContrast === wcagStandard || colorContrast === 'AAA') {
                 passWcag = true
             }
-        })
+        })// stepping through colors in colorScheme
+
         return passWcag
-    }
+    } // checks if scheme colors are wcag compliant
 
 
     generateCombinations() {
@@ -95,8 +95,8 @@ class Renderer extends React.Component {
                 let shade = parseInt(this.state.shade)
 
                 // FIXME: 15% shade actually stops at 90 and never reaches 100
-                // TODO: we need probably limits for shade
-                for(let l = constants.minShadeLightStep; l <= constants.maxShadeLightStep; l += shade){ // shade/light step by 10
+
+                for(let l = constants.minShadeLightStep; l <= constants.maxShadeLightStep; l += shade){ // shade/light step by 10°
                     for(let s = constants.minSaturationStep; s <= constants.maxSaturationStep; s += 10){ // saturation step by 10%
                         count1 += 1
 
@@ -110,7 +110,8 @@ class Renderer extends React.Component {
                         if(this.isSchemeWcagCompliant(colorScheme)) {
                             count2 += 1
                             newSchemesCombinations.push(colorScheme)
-                        }
+                        }// if all colors in colorScheme are wcag compliant, scheme will be pushed
+
                     } // stepping through saturation
                 } // stepping through shade/lightness
 
@@ -120,7 +121,7 @@ class Renderer extends React.Component {
         console.log(count1);
         console.log(count2);
         this.setState({schemesCombinations: newSchemesCombinations})
-    }
+    } //
 
     // actions
     closePicker() {
