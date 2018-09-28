@@ -43,14 +43,14 @@ class PickerComponent extends React.Component {
                 <Selector
                     passClass='hue'
                     title='Hue Step'
-                    options={['5°', '10°', '15°', '20°']}
+                    options={['10°', '15°', '20°']}
                     active={this.props.hue}
                     click={this.props.changeHue}/>
 
                 <Selector
                     passClass='shade'
                     title='Shade/Light Step'
-                    options={['5%', '10%', '15%', '20%']}
+                    options={['10%', '15%', '20%']}
                     active={this.props.shade}
                     click={this.props.changeShade}/>
 
