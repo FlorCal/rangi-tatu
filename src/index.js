@@ -26,8 +26,9 @@ class Renderer extends React.Component {
 
             baseColor: '', // will always start with #
             standard: 'WCAG AA',
-            hue: '20°',
-            shade: '10%',
+            hue: '15°',
+            saturation: '15%',
+            shade: '15%',
             /*
             [ //combinations
               [ // scheme
@@ -93,7 +94,7 @@ class Renderer extends React.Component {
                 let complimentaryColors2 = this.hslComplimentary(baseHsl[0], dd)
 
                 let shade = parseInt(this.state.shade)
-
+                let saturation = parseInt(this.state.saturation)
                 // FIXME: 15% shade actually stops at 90 and never reaches 100
 
                 for (let l = constants.minShadeLightStep;
@@ -102,7 +103,7 @@ class Renderer extends React.Component {
 
                     for (let s = constants.minSaturationStep;
                         s <= constants.maxSaturationStep;
-                        s += constants.saturationStep) { // saturation step by 10%
+                        s += saturation) { // saturation step by 10%
 
                         count1 += 1
 
@@ -124,7 +125,7 @@ class Renderer extends React.Component {
             }
         }
 
-        // console.info(`Total: ${count1}, Passed: ${count2}`)
+        console.info(`Total: ${count1}, Passed: ${count2}`)
         // console.warn(`Total: ${count1}, Passed: ${count2}`)
         this.setState({schemesCombinations: newSchemesCombinations}, callback)
     } //
@@ -156,6 +157,10 @@ class Renderer extends React.Component {
 
     changeHue(val) {
         this.setState({hue: val})
+    }
+
+    changeSaturation(val) {
+        this.setState({saturation: val})
     }
 
     changeShade(val) {
@@ -198,6 +203,7 @@ class Renderer extends React.Component {
                     closePicker={this.closePicker.bind(this)}
                     changeStandard={this.changeStandard.bind(this)}
                     changeHue={this.changeHue.bind(this)}
+                    changeSaturation={this.changeSaturation.bind(this)}
                     changeShade={this.changeShade.bind(this)}
                     createSchemes={this.createSchemes.bind(this)}
                     baseColorChange={this.baseColorChange.bind(this)}

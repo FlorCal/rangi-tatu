@@ -48,6 +48,13 @@ class PickerComponent extends React.Component {
                     click={this.props.changeHue}/>
 
                 <Selector
+                    passClass='saturation'
+                    title='Saturation Step'
+                    options={['10%', '15%', '20%']}
+                    active={this.props.saturation}
+                    click={this.props.changeSaturation}/>
+
+                <Selector
                     passClass='shade'
                     title='Shade/Light Step'
                     options={['10%', '15%', '20%']}
