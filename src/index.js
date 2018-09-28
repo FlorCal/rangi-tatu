@@ -124,8 +124,8 @@ class Renderer extends React.Component {
             }
         }
 
-        console.log(count1);
-        console.log(count2);
+        // console.info(`Total: ${count1}, Passed: ${count2}`)
+        // console.warn(`Total: ${count1}, Passed: ${count2}`)
         this.setState({schemesCombinations: newSchemesCombinations}, callback)
     } //
 

@@ -14,7 +14,7 @@ class SchemeComponent extends React.Component {
     render() {
 
         let baseColor = this.props.hexColor
-        // console.log(baseColor)
+
         return(
             <div className='SchemeComponent'>
 
