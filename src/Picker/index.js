@@ -7,6 +7,7 @@ import Selector from './Selector'
 
 // assets
 import picker from '../app/img/picker.svg'
+import constants from '../../constants'
 
 class PickerComponent extends React.Component {
 
@@ -43,21 +44,21 @@ class PickerComponent extends React.Component {
                 <Selector
                     passClass='hue'
                     title='Hue Step'
-                    options={['10°', '15°', '20°']}
+                    options={constants.SelectorOptions.hueOptions}
                     active={this.props.hue}
                     click={this.props.changeHue}/>
 
                 <Selector
                     passClass='saturation'
                     title='Saturation Step'
-                    options={['10%', '15%', '20%']}
+                    options={constants.SelectorOptions.saturationOptions}
                     active={this.props.saturation}
                     click={this.props.changeSaturation}/>
 
                 <Selector
                     passClass='shade'
                     title='Shade/Light Step'
-                    options={['10%', '15%', '20%']}
+                    options={constants.SelectorOptions.shadeOptions}
                     active={this.props.shade}
                     click={this.props.changeShade}/>
 
