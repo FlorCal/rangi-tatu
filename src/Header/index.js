@@ -9,16 +9,16 @@ import question from '../app/img/question.svg'
 class HeaderComponent extends React.Component {
 
     isBaseColorLightOrDark() {
-        let textColor
-        if (this.props.baseColor){
+        let textColor = '#333333'
+        if (this.props.baseColor && this.props.schemesCombinations.length > 0) {
             let color  = convert.hex.hsl(this.props.baseColor)
-            color[1] > 50 && color[2] < 50 ? textColor = '#ffffff' : textColor = '#333333'
+            if (color[2] < 50) textColor = '#ffffff'
         }
         return textColor
     }
 
     render() {
-        console.log(this.isBaseColorLightOrDark());
+        // console.log(this.isBaseColorLightOrDark());
 
         let baseColor = this.props.schemes ? this.props.baseColor : null
 
@@ -32,7 +32,7 @@ class HeaderComponent extends React.Component {
                 Rangi Tatu
                 </h1>
                 <a className='q'>
-                    <img style={{backgroundStyle: this.isBaseColorLightOrDark()}} onClick={this.props.openAbout} src={question}/>
+                    <img style={{fill: this.isBaseColorLightOrDark()}} onClick={this.props.openAbout} src={question}/>
                 </a>
             </div>
         )

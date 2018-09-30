@@ -31,11 +31,15 @@ class Renderer extends React.Component {
             shade: '15%',
             /*
             [ //combinations
-              [ // scheme
-                [235,50,20], // color1 [hue, saturation, lightness]
-                [230,30,40], // color2
-                // ..., ..., ...
-              ] // , ..., ..., ...
+              {
+                colors: [
+                  [235,50,20], // color1 [hue, saturation, lightness]
+                  [230,30,40], // color2
+                  [230,30,40],
+                  [230,30,40]
+                ],
+                name: 'Mud Newt' // randomly generated name
+              }
             ]
             */
             schemesCombinations: [] // color combinations
@@ -88,8 +92,8 @@ class Renderer extends React.Component {
         let count1 = 0
         let count2 = 0
 
-        for(let d = 5; d <= 90; d += hue) { // primary hue step
-            for(let dd = d + hue; dd <= 90; dd += hue){ // secondary hue step
+        for(let d = 5; d <= 170; d += hue) { // primary hue step
+            for(let dd = d + hue; dd <= 170; dd += hue){ // secondary hue step
                 let complimentaryColors1 = this.hslComplimentary(baseHsl[0], d)
                 let complimentaryColors2 = this.hslComplimentary(baseHsl[0], dd)
 
@@ -111,7 +115,8 @@ class Renderer extends React.Component {
                             [complimentaryColors1[0], s, l],
                             [complimentaryColors2[0], s, l],
                             [complimentaryColors2[1], s, l],
-                            [complimentaryColors1[1], s, l]
+                            [complimentaryColors1[1], s, l],
+
                         ]
 
                         if(this.isSchemeWcagCompliant(colorScheme)) {
@@ -125,8 +130,8 @@ class Renderer extends React.Component {
             }
         }
 
-        console.info(`Total: ${count1}, Passed: ${count2}`)
-        // console.warn(`Total: ${count1}, Passed: ${count2}`)
+        console.info(`%cTotal: ${count1}, Passed: ${count2}`, 'background: #832C65')
+
         this.setState({schemesCombinations: newSchemesCombinations}, callback)
     } //
 
