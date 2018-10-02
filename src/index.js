@@ -2,8 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import convert from 'color-convert'
 import contrast from 'get-contrast'
+
+// assets
 import './index.scss'
 import constants from '../constants'
+import createRandomNames from './app/data/name.js'
 
 //componenets
 import Container from './Container'
@@ -30,8 +33,8 @@ class Renderer extends React.Component {
             saturation: '15%',
             shade: '15%',
             /*
-            [ //combinations
-              {
+            [ //newSchemesCombinations
+              { //
                 colors: [
                   [235,50,20], // color1 [hue, saturation, lightness]
                   [230,30,40], // color2
@@ -72,7 +75,7 @@ class Renderer extends React.Component {
         let wcagStandard = this.state.standard.split(' ')[1] // ['WCAG', 'AA'] or ['WCAG', 'AAA'] -> 'AA' 0r 'AAA'
         let passWcag = false
 
-        colorScheme.forEach(color => {
+        colorScheme.colors.forEach(color => {
             let hslBackground = `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`
             let colorContrast = contrast.score(this.state.baseColor, hslBackground) // get-contrast library checks for AAA & AA contrast
 
@@ -111,13 +114,15 @@ class Renderer extends React.Component {
 
                         count1 += 1
 
-                        let colorScheme = [
-                            [complimentaryColors1[0], s, l],
-                            [complimentaryColors2[0], s, l],
-                            [complimentaryColors2[1], s, l],
-                            [complimentaryColors1[1], s, l],
-
-                        ]
+                        let colorScheme = {
+                            colors:[
+                                [complimentaryColors1[0], s, l],
+                                [complimentaryColors2[0], s, l],
+                                [complimentaryColors2[1], s, l],
+                                [complimentaryColors1[1], s, l],
+                            ],
+                            name: createRandomNames()
+                        }
 
                         if(this.isSchemeWcagCompliant(colorScheme)) {
                             count2 += 1
