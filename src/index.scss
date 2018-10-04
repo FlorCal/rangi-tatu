@@ -7,6 +7,9 @@ $cBlack: #000;
 $sFont: 16px;
 $sFontMedium: 20px;
 $sFontbig: 24px;
+$phoneWidth: 479px;
+$tabletMinWidth: 480px;
+$tabletMaxWidth:  991px;
 
 // fonts
 @font-face {
@@ -40,6 +43,7 @@ $sFontbig: 24px;
 @import './About/index.scss';
 @import './Button/index.scss';
 
+
 // core
 body {
     background: $cWhite;
@@ -57,4 +61,5 @@ body {
         pointer-events: none;
         opacity: 0.5;
     }
+
 }
