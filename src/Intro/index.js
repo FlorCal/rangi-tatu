@@ -8,14 +8,15 @@ class IntroComponent extends React.Component {
 
         return (
             <div className='IntroComponent'>
-            
+
                 <div className='title'>Rangi Tatu</div>
 
                 <div className='info'>
                     Generate accessible and pleasing sets of 3 color palettes <br/>that are WCAG2 compliant.
-                    <div className='border'></div>
                 </div>
 
+                <div className='border'></div>
+                 
                 <Button
                     title='Let&apos;s Go'
                     click={this.props.closeIntro}/>
