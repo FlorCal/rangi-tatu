@@ -14,8 +14,9 @@
 
     .header {
         display: grid;
+        border-bottom: .1px solid $cGrey;
         grid-template-columns: 20px 42px 1fr 1fr 20px;
-        grid-template-rows: 67px 50px;
+        grid-template-rows: 67px 35px;
         grid-template-areas:
         '. img title close .'
         '. . . . .';
@@ -45,6 +46,10 @@
 
     }// header
 
+    .DropHex {
+        padding-top: 30px;
+    }
+
     .DropHex .wrapper {
         height: 43px;
         width: calc(50% - 12px);
@@ -57,7 +62,13 @@
 
     .button {
         justify-self: center;
-        margin-top: 44px;
+        margin-top: 20px;
+        padding-top: 24px;
+        border-top: .1px solid $cGrey;
+    }
+
+    @media screen and (max-width: $phoneMaxWidth) {
+        width: 100%;
     }
 
 }// PickerComponent
