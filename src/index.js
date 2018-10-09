@@ -50,10 +50,10 @@ class Renderer extends React.Component {
     }
 
     // lifecycle
-    // componentDidMount(){
-    // this.closeIntro()
-    // this.createSchemes()
-    // }
+    componentDidMount(){
+        this.closeIntro()
+        // this.createSchemes()
+    }
 
     // accepts: base degree and complimantary angle degree
     // outputs: 2 complimantary color degrees [firstComp, secondComp]

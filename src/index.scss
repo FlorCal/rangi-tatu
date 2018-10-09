@@ -11,6 +11,10 @@ $phoneMaxWidth: 479px;
 $tabletMinWidth: 480px;
 $tabletMaxWidth:  991px;
 
+$phone: (max-width: 530px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 530px);
+
+$tablet: (min-width: 531px), (-webkit-min-device-pixel-ratio: 2) and (min-width: 531px);
+
 // fonts
 @font-face {
     font-family: fMedium;

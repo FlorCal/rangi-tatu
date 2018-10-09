@@ -67,10 +67,11 @@
     } //wrapper
 
     @media screen and (min-height: 600px) and (max-height: 992px) {
-        & {
-            grid-template-rows: 10px 18px 18px 44px 10px;
-        }
+        grid-template-rows: 10px 18px 18px 44px 10px;
+    }
 
+    @media screen and (max-width: $phoneMaxWidth) {
+        grid-template-rows: 10px 18px 10px 44px 10px;
     }
 
 }// .button, .DropHex, .SelectorComponent
