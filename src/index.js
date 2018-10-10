@@ -50,10 +50,10 @@ class Renderer extends React.Component {
     }
 
     // lifecycle
-    componentDidMount(){
-        this.closeIntro()
-        // this.createSchemes()
-    }
+    // componentDidMount(){
+    //     this.closeIntro()
+    //     // this.createSchemes()
+    // }
 
     // accepts: base degree and complimantary angle degree
     // outputs: 2 complimantary color degrees [firstComp, secondComp]
@@ -73,15 +73,15 @@ class Renderer extends React.Component {
 
     isSchemeWcagCompliant(colorScheme) {
         let wcagStandard = this.state.standard.split(' ')[1] // ['WCAG', 'AA'] or ['WCAG', 'AAA'] -> 'AA' 0r 'AAA'
-        let passWcag = false
+        let passWcag = true
 
         colorScheme.colors.forEach(color => {
             let hslBackground = `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`
             let colorContrast = contrast.score(this.state.baseColor, hslBackground) // get-contrast library checks for AAA & AA contrast
 
-            if (colorContrast === wcagStandard || colorContrast === 'AAA') {
-                passWcag = true
-            }
+            if(colorContrast === 'F') passWcag = false
+            if(wcagStandard === 'AAA' && colorContrast === 'AA') passWcag = false
+
         })// stepping through colors in colorScheme
 
         return passWcag
