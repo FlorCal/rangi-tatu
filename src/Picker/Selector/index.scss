@@ -25,6 +25,7 @@
 
         button {
             overflow: hidden;
+            background: #fefefe;
             border: 1px solid #666;
             font-family: fRegular;
             font-size: $sFont;
@@ -66,11 +67,11 @@
 
     } //wrapper
 
-    @media screen and (min-height: 600px) and (max-height: 992px) {
+    @media #{$tablet} {
         grid-template-rows: 10px 18px 18px 44px 10px;
     }
 
-    @media screen and (max-width: $phoneMaxWidth) {
+    @media #{$phone} {
         grid-template-rows: 10px 18px 10px 44px 10px;
     }
 
