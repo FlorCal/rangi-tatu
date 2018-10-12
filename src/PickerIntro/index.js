@@ -3,6 +3,8 @@ import React from 'react'
 
 //assets
 import bowl from '../app/img/bowl.svg'
+
+
 class PickerIntroComponent extends React.Component {
     render() {
         return (

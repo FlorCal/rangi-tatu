@@ -43,4 +43,24 @@
         }
     }
 
-}
+    @media #{$phone} {
+        grid-template-columns: 100px 1fr 100px;
+
+        .picker {
+            margin-left: 18px;
+            font-size: 12px;
+
+            img {
+                padding-right: 5px;
+            }
+        }
+
+        .title {
+            font-size: 22px;
+        }
+
+        .q {
+            margin-right: 30px;
+        }
+    }
+} // HeaderComponent

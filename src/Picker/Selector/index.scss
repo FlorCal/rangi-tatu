@@ -14,7 +14,6 @@
     .title {
         grid-area: title;
         font-family: fBold;
-        // padding-top: 25px;
     }
 
     .wrapper {
@@ -26,6 +25,7 @@
 
         button {
             overflow: hidden;
+            background: #fefefe;
             border: 1px solid #666;
             font-family: fRegular;
             font-size: $sFont;
@@ -67,4 +67,12 @@
 
     } //wrapper
 
-}// SelectorComponent
+    @media #{$tablet} {
+        grid-template-rows: 10px 18px 18px 44px 10px;
+    }
+
+    @media #{$phone} {
+        grid-template-rows: 10px 18px 10px 44px 10px;
+    }
+
+}// .button, .DropHex, .SelectorComponent

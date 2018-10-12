@@ -1,7 +1,6 @@
 import React from 'react'
 import convert from 'color-convert'
 
-import createRandomNames from '../../app/data/name.js'
 
 class SchemeComponent extends React.Component {
     plotHexs() {
@@ -12,9 +11,8 @@ class SchemeComponent extends React.Component {
         return hexArr.join(' / ')
     }
     render() {
-
         let baseColor = this.props.hexColor
-        // console.log(baseColor)
+
         return(
             <div className='SchemeComponent'>
 
@@ -26,7 +24,7 @@ class SchemeComponent extends React.Component {
                     ))}
                 </div>
 
-                <div className='name' style={{color:baseColor}}>{createRandomNames()}</div>
+                <div className='name' style={{color:baseColor}}>{this.props.name}</div>
                 <div className='hue' style={{color:baseColor}}>{this.plotHexs()}</div>
                 <div className='copy' style={{color:baseColor}}>Copy</div>
 
