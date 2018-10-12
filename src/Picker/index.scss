@@ -83,6 +83,10 @@
 
     } // selectorWrapper
 
+    @media #{$tablet} {
+        width: 280px;
+    }
+
     @media #{$phone} {
         width: 100%;
         left: -418px;
