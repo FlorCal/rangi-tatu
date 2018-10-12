@@ -14,4 +14,9 @@
         grid-row-gap: 40px;
         grid-auto-rows: 240px;
     }
-}
+
+    @media #{$phone} {
+        grid-template-columns: 1fr;
+    }
+
+} // SchemesComponent
