@@ -32,7 +32,7 @@ class HeaderComponent extends React.Component {
                     <span onClick={this.props.openPicker} style={{color: textColor}}>Picker</span>
                 </div>
                 <h1 className='title'>
-                Rangi Tatu
+                Rangi Bora
                 </h1>
                 <a className='q'>
                     <img onClick={this.props.openAbout} src={this.isBaseColorDark() ? question2 : question}/>

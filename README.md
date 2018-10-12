@@ -1,4 +1,4 @@
-# rangi-tatu
+# rangi-bora
 
 #### Steps to run the project
 
