@@ -34,4 +34,10 @@
         text-decoration: underline;
     }
 
+    @media #{$phone} {
+        .hue {
+            font-size: 14px;
+        }
+    }
+
 }// SchemeComponent
