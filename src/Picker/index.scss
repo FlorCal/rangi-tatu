@@ -66,7 +66,7 @@
         }
 
         .DropHex .wrapper {
-            height: 43px;
+            height: 42px;
             width: calc(50% - 12px);
             border-radius: 4px;
             border: 1px solid #666;
@@ -83,10 +83,6 @@
         }
 
     } // selectorWrapper
-
-    @media #{$tablet} {
-        width: 280px;
-    }
 
     @media #{$phone} {
         width: 100%;
