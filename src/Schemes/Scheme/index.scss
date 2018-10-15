@@ -16,16 +16,15 @@
     .name {
         grid-area: 1 / 1 / auto / span 3;
         font-size: 48px;
-        margin-left: 24px;
+        margin: 0 24px;
         margin-top: auto;
         padding-top: 20px;
     }
 
     .hue {
         grid-area: 2 / 1 / auto / span 3;
-        align-self: end;
         margin-left: 24px;
-        padding-bottom: 40px;
+        margin-bottom: 40px;
     }
 
     .copy {

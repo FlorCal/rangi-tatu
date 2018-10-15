@@ -13,6 +13,8 @@ class SchemeComponent extends React.Component {
     render() {
         let baseColor = this.props.hexColor
 
+        let hexAlign = this.props.name.length > 15 ? 'end' : 'center';
+
         return(
             <div className='SchemeComponent'>
 
@@ -25,7 +27,8 @@ class SchemeComponent extends React.Component {
                 </div>
 
                 <div className='name' style={{color:baseColor}}>{this.props.name}</div>
-                <div className='hue' style={{color:baseColor}}>{this.plotHexs()}</div>
+                <div className='hue'
+                    style={{color:baseColor, alignSelf: hexAlign}}>{this.plotHexs()}</div>
                 <div className='copy' style={{color:baseColor}}>Copy</div>
 
             </div>
