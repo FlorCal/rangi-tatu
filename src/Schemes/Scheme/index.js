@@ -28,7 +28,6 @@ class SchemeComponent extends React.Component {
                     <div className='name' style={{color:baseColor}}>{this.props.name}</div>
                     <div className='hue'
                         style={{color:baseColor}}>{this.plotHexs()}</div>
-                    <div className='copy' style={{color:baseColor}}>Copy</div>
                 </div>
 
             </div>
