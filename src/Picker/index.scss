@@ -1,6 +1,6 @@
 .PickerComponent {
     position: fixed;
-    left: -328px;
+    left: -628px;
     top: 0;
     width: 320px;
     height: 100vh;
@@ -86,7 +86,6 @@
 
     @media #{$phone} {
         width: 100%;
-        left: -428px;
     }
 
 }// PickerComponent
