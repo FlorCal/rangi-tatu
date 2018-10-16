@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     grid-template-areas: '. schemes .';
+    padding-top: 5px;
 
     .schemes {
         grid-area: schemes;
@@ -17,9 +18,11 @@
 
     @media #{$phone} {
         grid-template-columns: 1fr;
+
         .schemes {
             grid-template-columns: none;
         }
+
     }
 
 } // SchemesComponent

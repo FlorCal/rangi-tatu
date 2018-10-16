@@ -2,38 +2,42 @@
     height: 240px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 85px 95px 60px;
-    padding-top: 5px;
+    grid-template-rows: min-content min-content min-content;
 
+    .texts {
+        grid-area: 1 / 1 / auto / auto;
+        position: relative;
+        height: inherit;
+        padding: 0 20px;
+
+        .name {
+            font-size: 48px;
+            padding-top: 40px;
+        }
+
+        .hue {
+            padding-top: 10px;
+        }
+
+        .copy {
+            text-decoration: underline;
+            position: absolute;
+            bottom: 40px;
+        }
+
+    } // texts
 
     .colors {
         grid-area: 1 / 1 / span 3;
+        height: 240px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
         grid-template-rows: 1fr;
     }
 
-    .name {
-        grid-area: 1 / 1 / auto / span 3;
-        font-size: 48px;
-        margin: 0 24px;
-        margin-top: auto;
-        padding-top: 20px;
-    }
+    @media screen and (max-width: 320px) {
+        overflow-x: hidden;
 
-    .hue {
-        grid-area: 2 / 1 / auto / span 3;
-        margin-left: 24px;
-        margin-bottom: 40px;
-    }
-
-    .copy {
-        grid-area: 3 / 1 / auto / span 3;
-        margin-left: 24px;
-        text-decoration: underline;
-    }
-
-    @media #{$phone} {
         .hue {
             font-size: 14px;
         }
