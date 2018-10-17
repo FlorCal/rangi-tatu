@@ -3,8 +3,8 @@
     height: calc(100vh - 100px);
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 380px 1fr;
-    grid-template-rows: 1fr 170px 140px 3fr;
+    grid-template-columns: 1fr 640 1fr;
+    grid-template-rows: 1fr 170px 120px 2fr;
     grid-template-areas:
     '. . . '
     '. bowl .'
@@ -13,12 +13,17 @@
 
     .bowl {
         grid-area: bowl;
+        align-self: center;
         justify-self: center;
+        padding-bottom: 40px;
     }
 
     .stir {
         grid-area: stir;
         font-size: $sFontbig;
         text-align: center;
+        align-self: center;
+        word-spacing: .5px;
+        padding-bottom: 50px;
     }
 }
