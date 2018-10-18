@@ -26,7 +26,7 @@ class Renderer extends React.Component {
             schemes: false, // schemes page appear  or not appear
 
             about: false, // application/team information that overlays whole app
-
+            hexCode: '',
             baseColor: '', // will always start with #
             standard: 'WCAG AA',
             hue: '15°',
@@ -50,10 +50,10 @@ class Renderer extends React.Component {
     }
 
     // lifecycle
-    // componentDidMount(){
-    //     this.closeIntro()
-    //     this.createSchemes()
-    // }
+    componentDidMount(){
+        this.closeIntro()
+        // this.createSchemes()
+    }
 
     // accepts: base degree and complimantary angle degree
     // outputs: 2 complimantary color degrees [firstComp, secondComp]
@@ -182,7 +182,8 @@ class Renderer extends React.Component {
         this.setState({
             pickerIntro: false,
             picker: false,
-            loading: true
+            loading: true,
+            baseColor: this.state.hexCode
         })
 
         // callback func created to wait for schemes to be generated before loading page clears
@@ -190,7 +191,7 @@ class Renderer extends React.Component {
             this.generateCombinations(() =>
                 this.setState({
                     loading: false,
-                    schemes: true
+                    schemes: true,
                 })
             )
         }, 500)
@@ -198,7 +199,7 @@ class Renderer extends React.Component {
 
     baseColorChange(e) {
         let val = e.target.value.startsWith('#') ? e.target.value : '#' + e.target.value
-        this.setState({baseColor: val})
+        this.setState({hexCode: val})
     }
 
     render() {
