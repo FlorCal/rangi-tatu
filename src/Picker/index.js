@@ -14,7 +14,7 @@ class PickerComponent extends React.Component {
 
     render() {
 
-        let buttonPassClass = 'title' + (this.props.baseColor.length < 4 ? ' restrict' : '')
+        let buttonPassClass = 'title' + (this.props.hexCode.length < 4 ? ' restrict' : '')
 
         return (
             <div className={'PickerComponent' + (this.props.picker ? ' open' : '' ) }>
@@ -32,7 +32,7 @@ class PickerComponent extends React.Component {
                     <div className='DropHex'>
                         <div className='title' >Drop in a hex code</div>
                         <input className='wrapper' type='text' placeholder='#FFFFFF' maxLength='7'
-                            value={this.props.baseColor}
+                            value={this.props.hexCode}
                             onChange={this.props.baseColorChange.bind(this)}/>
                     </div>
 
@@ -71,7 +71,7 @@ class PickerComponent extends React.Component {
                             passClass={buttonPassClass}
                             title='Create'/>
                     </div>
-                    
+
                 </div>
 
 

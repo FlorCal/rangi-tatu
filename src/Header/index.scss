@@ -35,11 +35,18 @@
     .q {
         grid-area: q;
         align-self: center;
-        text-align: end;
-        margin-right: 62px;
 
         img {
+            margin-left: -16px;
             cursor: pointer;
+        }
+    }
+
+    @media #{$tablet} {
+        grid-template-columns: 100px 1fr 100px;
+
+        .q {
+            margin-left: 44px;
         }
     }
 
@@ -47,11 +54,10 @@
         grid-template-columns: 100px 1fr 100px;
 
         .picker {
-            margin-left: 18px;
-            font-size: 12px;
+            margin-left: 20px;
 
-            img {
-                padding-right: 5px;
+            span {
+                display: none;
             }
         }
 
@@ -60,7 +66,7 @@
         }
 
         .q {
-            margin-right: 30px;
+            margin-left: 78px;
         }
     }
 } // HeaderComponent
