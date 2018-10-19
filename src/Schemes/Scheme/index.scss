@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content;
+    margin-bottom: 40px;
 
     .texts {
         grid-area: 1 / 1 / auto / auto;
@@ -12,13 +13,14 @@
 
         .name {
             font-size: 48px;
+            line-height: 1.2;
             padding-top: 40px;
             margin: 0;
         }
 
         .hue {
             padding-top: 10px;
-            margin-bottom: 40px;
+            line-height: 1.5;
         }
 
     } // texts

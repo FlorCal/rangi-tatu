@@ -51,8 +51,8 @@ class Renderer extends React.Component {
 
     // lifecycle
     // componentDidMount(){
-    // this.closeIntro()
-    // this.createSchemes()
+    //     this.closeIntro()
+    //     this.createSchemes()
     // }
 
     // accepts: base degree and complimantary angle degree
