@@ -1,11 +1,27 @@
 .SchemesComponent {
-    overflow: scroll;
+    overflow-y: scroll;
     height: calc(100vh - 100px);
     width: 100vw;
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     grid-template-areas: '. schemes .';
     padding-top: 5px;
+
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 7px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: $cGrey;
+        border: 1px solid white;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    }
 
     .schemes {
         grid-area: schemes;
