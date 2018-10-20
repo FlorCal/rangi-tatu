@@ -14,7 +14,7 @@ class HeaderComponent extends React.Component {
         let darkColor = false
         if (this.props.baseColor.length >= 3 && this.props.schemesCombinations.length > 0 && !this.props.loading) {
             let color  = convert.hex.hsl(this.props.baseColor)
-            if (color[2] < 50) darkColor = true
+            if (color[2] < 60) darkColor = true
         }
         return darkColor
     }
