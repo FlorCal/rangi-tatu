@@ -48,7 +48,8 @@ class AboutComponent extends React.Component {
                     {this.plotRandomImage()}
 
                     <div className='madeBy'>Made with ice cream by <span onClick={this.onFritzClick.bind(this)}>Fritz</span> & <span onClick={this.onFlorClick.bind(this)} className='flor'>Flor.</span>
-                        <div>Names supplied by <span onClick={this.onEmilyClick.bind(this)} >Emily.</span></div></div>
+                        <div>Names supplied by <span onClick={this.onEmilyClick.bind(this)} >Emily.</span></div>
+                    </div>
                 </div>
             </div>
         )
