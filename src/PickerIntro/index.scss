@@ -3,7 +3,7 @@
     height: calc(100vh - 100px);
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 640 1fr;
+    grid-template-columns: 1fr 400px 1fr;
     grid-template-rows: 1fr 170px 120px 2fr;
     grid-template-areas:
     '. . .'
@@ -32,6 +32,7 @@
     }
 
     @media #{$phone} {
-        display: none;
+        grid-template-columns: 20px 1fr 20px;
     }
+
 } // PickerIntroComponent

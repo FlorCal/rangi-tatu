@@ -53,6 +53,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: $cGrey;
+    -webkit-overflow-scrolling: touch;
 
     .fBlack {
         font-family: fBold;

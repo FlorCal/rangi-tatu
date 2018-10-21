@@ -8,14 +8,14 @@
     text-align: center;
     color: $cWhite;
     display: grid;
-    grid-template-columns: 1fr 20px 570px 20px 1fr;
+    grid-template-columns: 1fr 570px 1fr;
     grid-template-rows: 30px 48px 94px 470px 1fr;
     grid-template-areas:
-    '. . . . .'
-    '. . button . .'
-    '. . . . .'
-    '. . about . .'
-    '. . . . .';
+    '. . . '
+    '.  button  .'
+    '. . . '
+    '.  about  .'
+    '. . .';
 
     .button {
         grid-area: button;
@@ -31,44 +31,42 @@
 
     .about {
         grid-area: about;
-        display: grid;
-        grid-template-rows: 36px 120px 250px 92px;
-        grid-template-areas:
-        'title'
-        'info'
-        'img'
-        'madeBy';
 
         .title {
-            grid-area: title;
             font-size: 40px;
             font-family: fBold;
         }
 
         .info {
-            grid-template: info;
+            padding-top: 40px;
             font-size: 18px;
             line-height: 28px;
-            align-self: end;
         }
 
         img {
-            grid-area: img;
-            align-self: end;
-            justify-self: center;
+            padding-top: 30px;
         }
 
         .madeBy {
-            grid-area: madeBy;
+            padding-top: 30px;
             font-size: 18px;
-            align-self: end;
             line-height: 28px;
-            padding-top: 28px;
+            padding-bottom: 40px;
 
             span {
                 text-decoration: underline;
                 cursor: pointer;
             }
+        }
+    }
+
+    @media #{$phone} {
+        grid-template-columns: 20px 1fr 20px;
+        grid-template-rows: 30px 30px 64px 470px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
         }
     }
 } // AboutComponent
