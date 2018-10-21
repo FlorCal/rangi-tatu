@@ -13,7 +13,7 @@ class PickerIntroComponent extends React.Component {
                     <img src={bowl}/>
                 </div>
                 <div className='instruction'>
-                    Bwana, drop in that hex code so I can <br/>
+                    Bwana, drop in that hex code so I can
                     get to mixing these colors up
                 </div>
             </div>
