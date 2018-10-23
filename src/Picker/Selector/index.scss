@@ -14,6 +14,13 @@
     .title {
         grid-area: title;
         font-family: fBold;
+
+        a {
+            font-family: fRegular;
+            margin-left: 10px;
+            display: inline-block;
+            border-bottom: 1px solid $cGrey;
+        }
     }
 
     .wrapper {
