@@ -31,6 +31,20 @@
         margin-left: 3px;
     }
 
+    @media screen and (max-width: 1024px) {
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .6);
+        pointer-events: none;
+
+        .bowl,
+        .instruction {
+            display: none;
+        }
+    }
+
     @media #{$phone} {
         grid-template-columns: 20px 1fr 20px;
     }
