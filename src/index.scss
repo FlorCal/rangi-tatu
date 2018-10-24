@@ -3,6 +3,7 @@ $cOffWhite: #f9f9f9;
 $cWhite: #fff;
 $cGrey: #333;
 $cLightGrey: #dfe3ea;
+$cDarkGrey: #474747;
 $cBlack: #000;
 $sFont: 16px;
 $sFontMedium: 20px;
@@ -37,6 +38,7 @@ $tablet: (min-width: 531px), (-webkit-min-device-pixel-ratio: 2) and (min-width:
 @import './PickerIntro/index.scss';
 @import './Picker/index.scss';
 @import './Picker/Selector/index.scss';
+@import './WCAGInfo/index.scss';
 @import './Header/index.scss';
 @import './Loading/index.scss';
 @import './Schemes/index.scss';

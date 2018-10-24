@@ -1,0 +1,43 @@
+.WCAGInfoComponent {
+    position: fixed;
+    background: $cDarkGrey;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    // color: $cWhite;
+    display: grid;
+    grid-template-columns: 1fr 570px 1fr;
+    grid-template-rows: 30px 48px 94px 470px 1fr;
+    grid-template-areas:
+    '. . . '
+    '.  ButtonComponent  .'
+    '. . . '
+    '.  about  .'
+    '. . .';
+
+    .ButtonComponent {
+        grid-area: ButtonComponent;
+        box-shadow: none;
+        background: $cWhite;
+        color: $cGrey;
+        height: 48px !important;
+        width: 140px;
+        border-radius: 4px;
+        justify-self: center;
+        font-size: $sFont;
+        font-family: fRegular;
+        text-decoration: underline;
+
+        &:hover {
+            animation: none;
+        }
+
+        &:active {
+            box-shadow: none;
+            background: none;
+        }
+
+    }// ButtonComponent
+
+} // WCAGInfoComponent

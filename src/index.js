@@ -13,6 +13,7 @@ import Container from './Container'
 import Picker from './Picker'
 import Intro from './Intro'
 import About from './About'
+import WCAGInfo from './WCAGInfo'
 
 class Renderer extends React.Component {
 
@@ -26,6 +27,7 @@ class Renderer extends React.Component {
             schemes: false, // schemes page appear  or not appear
 
             about: false, // application/team information that overlays whole app
+            wcagInfo: false,
             hexCode: '',
             baseColor: '', // will always start with #
             standard: 'WCAG AA',
@@ -52,7 +54,7 @@ class Renderer extends React.Component {
     // lifecycle
     // componentDidMount(){
     //     this.closeIntro()
-    //     this.createSchemes()
+    //     // this.createSchemes()
     // }
 
     // accepts: base degree and complimantary angle degree
@@ -161,6 +163,8 @@ class Renderer extends React.Component {
         this.setState({intro: false})
     }
 
+
+
     changeStandard(val) {
         this.setState({standard: val})
     }
@@ -219,6 +223,10 @@ class Renderer extends React.Component {
                     createSchemes={this.createSchemes.bind(this)}
                     baseColorChange={this.baseColorChange.bind(this)}
                 />
+
+                {this.state.wcagInfo ?
+                    <WCAGInfo />
+                    : null}
 
                 {this.state.intro ?
                     <Intro
