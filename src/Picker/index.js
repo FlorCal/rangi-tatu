@@ -39,6 +39,7 @@ class PickerComponent extends React.Component {
                     <Selector
                         passClass='standard'
                         title='WCAG Standard'
+                        clicked={this.props.openWcagInfo.bind(this)}
                         options={['WCAG AA', 'WCAG AAA']}
                         active={this.props.standard}
                         click={this.props.changeStandard}/>

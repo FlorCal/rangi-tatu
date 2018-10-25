@@ -9,7 +9,8 @@ class WCAGInfoComponent extends React.Component {
         return (
             <div className='WCAGInfoComponent'>
                 <Button
-                    title ='Take me back'
+                    title='Take me back'
+                    click={this.props.closeWcagInfo}
                 />
             </div>
         )

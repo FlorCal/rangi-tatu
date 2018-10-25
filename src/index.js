@@ -163,7 +163,13 @@ class Renderer extends React.Component {
         this.setState({intro: false})
     }
 
+    openWcagInfo() {
+        this.setState({wcagInfo: true})
+    }
 
+    closeWcagInfo() {
+        this.setState({wcagInfo: false})
+    }
 
     changeStandard(val) {
         this.setState({standard: val})
@@ -222,10 +228,12 @@ class Renderer extends React.Component {
                     changeShade={this.changeShade.bind(this)}
                     createSchemes={this.createSchemes.bind(this)}
                     baseColorChange={this.baseColorChange.bind(this)}
+                    openWcagInfo={this.openWcagInfo.bind(this)}
                 />
 
                 {this.state.wcagInfo ?
-                    <WCAGInfo />
+                    <WCAGInfo
+                        closeWcagInfo={this.closeWcagInfo.bind(this)}/>
                     : null}
 
                 {this.state.intro ?

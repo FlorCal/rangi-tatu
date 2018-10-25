@@ -35,7 +35,11 @@
 
         &:active {
             box-shadow: none;
-            background: none;
+            background: $cWhite;
+        }
+
+        &:focus {
+            border: 0;
         }
 
     }// ButtonComponent
