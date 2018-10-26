@@ -76,4 +76,44 @@
         }
     }
 
+    @media #{$phone} {
+        grid-template-columns: 20px 1fr 20px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .links {
+            margin-top: 80px;
+            padding: 0 20px 30px;
+        }
+    }
+
+    @media #{$tablet} {
+
+        .about {
+            margin-bottom: 80px;
+        }
+
+        .links {
+            padding-right: 80px;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+
+        .about {
+            div {
+                font-size: 30px;
+                padding-bottom: 40px;
+                padding-top: 50px;
+            }
+        }
+
+        .links {
+            padding-top: 40px;
+        }
+    }
+
 } // WCAGInfoComponent
