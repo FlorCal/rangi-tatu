@@ -13,7 +13,7 @@
     '.  ButtonComponent  .'
     '. . . '
     '.  about  .'
-    'links links links';
+    '. . .';
 
     .ButtonComponent {
         grid-area: ButtonComponent;
@@ -62,17 +62,11 @@
             text-align: center;
             font-family: fRegular;
         }
-    }
 
-    .links {
-        grid-area: links;
-        color: #ffc85a;
-        align-self: center;
-        padding-left: 110px;
-
-        .link {
-            padding-bottom: 20px;
+        span {
             cursor: pointer;
+            display: inline-block;
+            border-bottom: .5px solid $cWhite;
         }
     }
 
@@ -83,21 +77,12 @@
         &::-webkit-scrollbar {
             display: none;
         }
-
-        .links {
-            margin-top: 80px;
-            padding: 0 20px 30px;
-        }
     }
 
     @media #{$tablet} {
 
         .about {
             margin-bottom: 80px;
-        }
-
-        .links {
-            padding-right: 80px;
         }
     }
 
@@ -109,10 +94,6 @@
                 padding-bottom: 40px;
                 padding-top: 50px;
             }
-        }
-
-        .links {
-            padding-top: 40px;
         }
     }
 
