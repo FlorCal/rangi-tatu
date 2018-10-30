@@ -14,7 +14,7 @@ import Picker from './Picker'
 import Intro from './Intro'
 import About from './About'
 import WCAGInfo from './WCAGInfo'
-import Info from './Info'
+import HueInfo from './HueInfo'
 
 class Renderer extends React.Component {
 
@@ -29,7 +29,7 @@ class Renderer extends React.Component {
 
             about: false, // application/team information that overlays whole app
             wcagInfo: false,
-            info: false,
+            hueInfo: false,
             hexCode: '',
             baseColor: '', // will always start with #
             standard: 'WCAG AA',
@@ -173,12 +173,12 @@ class Renderer extends React.Component {
         this.setState({wcagInfo: false})
     }
 
-    openInfo() {
-        this.setState({info: true})
+    openHueInfo() {
+        this.setState({hueInfo: true})
     }
 
-    closeInfo() {
-        this.setState({info: false})
+    closeHueInfo() {
+        this.setState({hueInfo: false})
     }
 
     changeStandard(val) {
@@ -239,7 +239,7 @@ class Renderer extends React.Component {
                     createSchemes={this.createSchemes.bind(this)}
                     baseColorChange={this.baseColorChange.bind(this)}
                     openWcagInfo={this.openWcagInfo.bind(this)}
-                    openInfo={this.openInfo.bind(this)}
+                    openHueInfo={this.openHueInfo.bind(this)}
                 />
 
                 {this.state.wcagInfo ?
@@ -247,9 +247,9 @@ class Renderer extends React.Component {
                         closeWcagInfo={this.closeWcagInfo.bind(this)}/>
                     : null}
 
-                {this.state.info ?
-                    <Info
-                        closeInfo={this.closeInfo.bind(this)}/>
+                {this.state.hueInfo ?
+                    <HueInfo
+                        closeHueInfo={this.closeHueInfo.bind(this)}/>
                     : null}
 
                 {this.state.intro ?

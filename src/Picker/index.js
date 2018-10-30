@@ -48,7 +48,7 @@ class PickerComponent extends React.Component {
                     <Selector
                         passClass='hue'
                         title='Hue Step'
-                        clicked={this.props.openInfo.bind(this)}
+                        clicked={this.props.openHueInfo.bind(this)}
                         options={constants.SelectorOptions.hueOptions}
                         active={this.props.hue}
                         click={this.props.changeHue}/>

@@ -3,16 +3,16 @@ import React from 'react'
 //components
 import Button from '../Button'
 
-class InfoComponent extends React.Component {
+class HueInfoComponent extends React.Component {
 
 
     render() {
         return (
-            <div className='InfoComponent'>
+            <div className='HueInfoComponent'>
 
                 <Button
                     title='Take me back'
-                    click={this.props.closeInfo}
+                    click={this.props.closeHueInfo}
                 />
 
                 <div className='about'>
@@ -30,6 +30,6 @@ class InfoComponent extends React.Component {
         )
     }
 
-} // WCAGInfoComponent
+} // HueInfoComponent
 
-export default InfoComponent
+export default HueInfoComponent
