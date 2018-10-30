@@ -5,6 +5,7 @@ import React from 'react'
 import Button from '../Button'
 import Selector from './Selector'
 
+
 // assets
 import picker from '../app/img/picker.svg'
 import constants from '../../constants'
@@ -47,6 +48,7 @@ class PickerComponent extends React.Component {
                     <Selector
                         passClass='hue'
                         title='Hue Step'
+                        clicked={this.props.openInfo.bind(this)}
                         options={constants.SelectorOptions.hueOptions}
                         active={this.props.hue}
                         click={this.props.changeHue}/>
