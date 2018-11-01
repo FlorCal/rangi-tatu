@@ -1,5 +1,6 @@
 import React from 'react'
 import convert from 'color-convert'
+import {CopyToClipboard} from 'react-copy-to-clipboard'
 
 
 class SchemeComponent extends React.Component {
@@ -26,8 +27,12 @@ class SchemeComponent extends React.Component {
 
                 <div className="texts">
                     <div className='name' style={{color:baseColor}}>{this.props.name}</div>
-                    <div className='hue'
-                        style={{color:baseColor}}>{this.plotHexs()}</div>
+
+                    <CopyToClipboard text={this.plotHexs()}>
+                        <div className='hue'
+                            style={{color:baseColor}}>{this.plotHexs()}</div>
+                    </CopyToClipboard>
+
                 </div>
 
             </div>
