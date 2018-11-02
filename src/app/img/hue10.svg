@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="327px" height="150px" viewBox="0 0 327 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,0 C0,77.319865 62.680135,140 140,140 C217.319865,140 280,77.319865 280,0 L0,0 Z" id="path-1"></path>
+    </defs>
+    <g id="V5.5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hue-colors" transform="translate(-132.000000, -342.000000)">
+            <g id="Group-2" transform="translate(131.000000, 342.000000)">
+                <g id="Group-3-Copy-2" transform="translate(28.000000, 0.000000)">
+                    <path d="M300,0 C300,82.8427125 232.842712,150 150,150 C67.1572875,150 1.01453063e-14,82.8427125 0,0 L300,0 Z" id="Path" fill="#FFFFFF"></path>
+                    <g id="Path-3-+-Path-3-+-Path-3-+-Path-3-+-Path-3-Mask" transform="translate(10.000000, 0.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#D8D8D8" xlink:href="#path-1"></use>
+                        <polygon id="Path-3" stroke="#FFFFFF" fill="#F2CC0D" mask="url(#mask-2)" points="140 0 186 142 94 142"></polygon>
+                        <polygon id="Path-3" stroke="#FFFFFF" fill="#F2A60D" mask="url(#mask-2)" transform="translate(181.732753, 57.440207) rotate(-36.000000) translate(-181.732753, -57.440207) " points="181.732753 -13.5597934 227.732753 128.440207 135.732753 128.440207"></polygon>
+                        <polygon id="Path-3" stroke="#FFFFFF" fill="#F2F20D" mask="url(#mask-2)" transform="translate(98.267247, 57.440207) rotate(36.000000) translate(-98.267247, -57.440207) " points="98.2672471 -13.5597934 144.267247 128.440207 52.2672471 128.440207"></polygon>
+                        <polygon id="Path-3" stroke="#FFFFFF" fill="#F2800D" mask="url(#mask-2)" transform="translate(207.525013, 21.940207) rotate(-72.000000) translate(-207.525013, -21.940207) " points="207.525013 -49.0597934 253.525013 92.9402066 161.525013 92.9402066"></polygon>
+                        <polygon id="Path-3" stroke="#FFFFFF" fill="#CCF20D" mask="url(#mask-2)" transform="translate(72.474987, 21.940207) rotate(72.000000) translate(-72.474987, -21.940207) " points="72.4749873 -49.0597934 118.474987 92.9402066 26.4749873 92.9402066"></polygon>
+                    </g>
+                    <path d="M100,0 C100,27.6142375 122.385763,50 150,50 C177.614237,50 200,27.6142375 200,0 L100,0 Z" id="Path" fill="#FFFFFF"></path>
+                    <polygon id="Triangle" fill="#FFFFFF" points="150 58 160 48 140 48"></polygon>
+                </g>
+                <text id="10" font-family="Eczar-Regular, Eczar" font-size="26" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="0.877" y="78">10</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
