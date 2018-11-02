@@ -15,7 +15,7 @@ class ContainerComponent extends React.Component {
             <div className='ContainerComponent'>
                 <Header {...this.props} />
                 {this.props.pickerIntro ? <PickerIntro /> : null}
-                {this.props.loading ? <Loading /> : null}
+                {this.props.loading ? <Loading {...this.props}/> : null}
                 {this.props.schemes ? <Schemes {...this.props}
                 /> : null}
             </div>
