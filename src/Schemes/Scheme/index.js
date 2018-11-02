@@ -4,12 +4,19 @@ import {CopyToClipboard} from 'react-copy-to-clipboard'
 
 
 class SchemeComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            copied: false
+        }
+    }
+
     plotHexs() {
         let hexArr = []
         this.props.colors.forEach(color => {
             hexArr.push('#' + convert.hsl.hex(color))
         })
-        return hexArr.join(' / ')
+        return hexArr
     }
     render() {
         let baseColor = this.props.hexColor
@@ -28,10 +35,13 @@ class SchemeComponent extends React.Component {
                 <div className="texts">
                     <div className='name' style={{color:baseColor}}>{this.props.name}</div>
 
-                    <CopyToClipboard text={this.plotHexs()}>
-                        <div className='hue'
-                            style={{color:baseColor}}>{this.plotHexs()}</div>
-                    </CopyToClipboard>
+                    {this.plotHexs().map( (hex, i) => (
+                        <CopyToClipboard key={i} text={hex} onCopy={() => this.setState({copied: true})}>
+                            <span className='hue'>{hex}{ i < (this.plotHexs().length - 1) ? ' / ' : ''}</span>
+                        </CopyToClipboard>
+                    ))}
+
+                    // {this.state.copied ? <span className='copied' style={{color: 'red'}}>Copied.</span> : null}
 
                 </div>
 
