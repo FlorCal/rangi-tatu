@@ -12,16 +12,16 @@ class HeaderComponent extends React.Component {
 
     isBaseColorDark() {
         let darkColor = false
-        if (this.props.baseColor.length >= 3 && this.props.schemesCombinations.length > 0 && !this.props.loading) {
+        if (this.props.baseColor.length >= 3 && this.props.schemesCombinations.length >= 0) {
             let color  = convert.hex.hsl(this.props.baseColor)
-            if (color[2] < 60) darkColor = true
+            if (color[2] < 50) darkColor = true
         }
         return darkColor
     }
 
     render() {
 
-        let baseColor = this.props.schemes && this.props.baseColor.length >= 3 && !this.props.loading ? this.props.baseColor : null
+        let baseColor = this.props.schemes && this.props.baseColor.length >= 3 ? this.props.baseColor : null
 
         let textColor = this.isBaseColorDark() ? '#ffffff' : '#333333'
 

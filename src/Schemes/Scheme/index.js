@@ -18,6 +18,7 @@ class SchemeComponent extends React.Component {
         })
         return hexArr
     }
+
     render() {
         let baseColor = this.props.hexColor
 
@@ -41,8 +42,6 @@ class SchemeComponent extends React.Component {
                         </CopyToClipboard>
                     ))}
 
-                    // {this.state.copied ? <span className='copied' style={{color: 'red'}}>Copied.</span> : null}
-
                 </div>
 
             </div>
@@ -51,3 +50,6 @@ class SchemeComponent extends React.Component {
 }
 
 export default SchemeComponent
+
+
+// {this.state.copied ? <div className='copied' style={{color: 'red'}}>Copied</div> : null}
