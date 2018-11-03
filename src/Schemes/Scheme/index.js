@@ -38,7 +38,7 @@ class SchemeComponent extends React.Component {
 
                     {this.plotHexs().map( (hex, i) => (
                         <CopyToClipboard key={i} text={hex} onCopy={() => this.setState({copied: true})}>
-                            <span className='hue'>{hex}{ i < (this.plotHexs().length - 1) ? ' / ' : ''}</span>
+                            <span className='hue' style={{color:baseColor}}>{hex}{ i < (this.plotHexs().length - 1) ? ' / ' : ''}</span>
                         </CopyToClipboard>
                     ))}
 
