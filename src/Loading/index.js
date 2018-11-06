@@ -17,7 +17,6 @@ class LoadingComponent extends React.Component {
     }
 
     render() {
-        console.log(this.props);
 
         let baseColor = this.props.schemes && this.props.baseColor.length >= 3 ? this.props.baseColor : null
 
