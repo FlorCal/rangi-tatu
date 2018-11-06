@@ -26,12 +26,13 @@ class SchemesComponent extends React.Component {
             <div className='SchemesComponent' style={{background: baseColor, WebkitScrollbarThumb: 'red'}}>
 
                 { this.props.schemesCombinations.length >= 1 ?
+
                     <div className='schemes'>
                         {this.props.schemesCombinations.map((scheme, i) => (
                             <Scheme hexColor={baseColor} colors={scheme.colors} name={scheme.name} key={i} />
                         ))}
                     </div> :
-                    <div style={{color: textColor}}>This is awkward but there aren&apos;t any compliant colrs. Please try again.</div>
+                    <div className='noSchemeMessage' style={{color: textColor}}>This is awkward but there aren&apos;t <br/> any compliant colors. Please try again.</div>
                 }
 
             </div>
