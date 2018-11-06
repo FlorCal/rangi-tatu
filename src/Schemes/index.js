@@ -26,7 +26,6 @@ class SchemesComponent extends React.Component {
             <div className='SchemesComponent' style={{background: baseColor, WebkitScrollbarThumb: 'red'}}>
 
                 { this.props.schemesCombinations.length >= 1 ?
-
                     <div className='schemes'>
                         {this.props.schemesCombinations.map((scheme, i) => (
                             <Scheme hexColor={baseColor} colors={scheme.colors} name={scheme.name} key={i} />
