@@ -15,6 +15,7 @@ import Intro from './Intro'
 import About from './About'
 import WCAGInfo from './WCAGInfo'
 import HueInfo from './HueInfo'
+import LightInfo from './LightInfo'
 
 class Renderer extends React.Component {
 
@@ -30,6 +31,7 @@ class Renderer extends React.Component {
             about: false, // application/team information that overlays whole app
             wcagInfo: false,
             hueInfo: false,
+            lightInfo:false,
             hexCode: '',
             baseColor: '', // will always start with #
             standard: 'WCAG AA',
@@ -181,6 +183,14 @@ class Renderer extends React.Component {
         this.setState({hueInfo: false})
     }
 
+    openLightInfo() {
+        this.setState({lightInfo: true})
+    }
+
+    closeLightInfo() {
+        this.setState({lightInfo: false})
+    }
+
     changeStandard(val) {
         this.setState({standard: val})
     }
@@ -240,6 +250,7 @@ class Renderer extends React.Component {
                     baseColorChange={this.baseColorChange.bind(this)}
                     openWcagInfo={this.openWcagInfo.bind(this)}
                     openHueInfo={this.openHueInfo.bind(this)}
+                    openLightInfo={this.openLightInfo.bind(this)}
                 />
 
                 {this.state.wcagInfo ?
@@ -250,6 +261,11 @@ class Renderer extends React.Component {
                 {this.state.hueInfo ?
                     <HueInfo
                         closeHueInfo={this.closeHueInfo.bind(this)}/>
+                    : null}
+
+                {this.state.lightInfo ?
+                    <LightInfo
+                        closeLightInfo={this.closeLightInfo.bind(this)}/>
                     : null}
 
                 {this.state.intro ?

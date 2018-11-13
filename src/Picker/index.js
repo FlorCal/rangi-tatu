@@ -63,6 +63,7 @@ class PickerComponent extends React.Component {
                     <Selector
                         passClass='shade'
                         title='Shade/Light Step'
+                        clicked={this.props.openLightInfo.bind(this)}
                         options={constants.SelectorOptions.shadeOptions}
                         active={this.props.shade}
                         click={this.props.changeShade}/>
