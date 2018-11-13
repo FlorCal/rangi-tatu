@@ -5,16 +5,15 @@ import Button from '../Button'
 
 //assets
 
-class LightStepComponent extends React.Component {
-
+class LightInfoComponent extends React.Component {
 
     render() {
         return (
-            <div className='LightStepComponent'>
+            <div className='LightInfoComponent'>
 
                 <Button
                     title='Take me back'
-                    click={}
+                    click={this.props.closeLightInfo}
                 />
 
                 <div className='about'>
@@ -38,6 +37,6 @@ class LightStepComponent extends React.Component {
         )
     }
 
-} // HueInfoComponent
+} // LightInfoComponent
 
-export default LightStepComponent
+export default LightInfoComponent
