@@ -5,11 +5,10 @@ import Button from '../Button'
 
 //assets
 import hue10 from '../app/img/hue10.svg'
-import hue15 from '../app/img/hue15.svg'
-import hue20 from '../app/img/hue20.svg'
+// import hue15 from '../app/img/hue15.svg'
+// import hue20 from '../app/img/hue20.svg'
 
 class HueInfoComponent extends React.Component {
-
 
     render() {
         return (
