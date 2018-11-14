@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="342px" height="132px" viewBox="0 0 342 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="109" y="10" width="56" height="112"></rect>
+        <filter x="-0.9%" y="-0.4%" width="101.8%" height="100.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="-1" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M57,10 L109,10 L109,122 L57,122 C54.790861,122 53,120.209139 53,118 L53,14 C53,11.790861 54.790861,10 57,10 Z" id="path-3"></path>
+        <filter x="-0.9%" y="-0.4%" width="101.8%" height="100.9%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="-1" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <rect id="path-5" x="165" y="10" width="56" height="112"></rect>
+        <filter x="-0.9%" y="-0.4%" width="101.8%" height="100.9%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="-1" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <rect id="path-7" x="221" y="10" width="56" height="112"></rect>
+        <filter x="-0.9%" y="-0.4%" width="101.8%" height="100.9%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="-1" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="V5.5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="shade-colors" transform="translate(-124.000000, -674.000000)">
+            <g id="Group" transform="translate(123.000000, 674.000000)">
+                <text id="20" font-family="Eczar-Regular, Eczar" font-size="26" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="0.083" y="72">20</tspan>
+                </text>
+                <path d="M47,2.98427949e-13 L339,2.98427949e-13 C341.209139,2.98022137e-13 343,1.790861 343,4 L343,128 C343,130.209139 341.209139,132 339,132 L47,132 C44.790861,132 43,130.209139 43,128 L43,4 C43,1.790861 44.790861,2.98833761e-13 47,2.98427949e-13 Z" id="Rectangle" fill="#FFFFFF"></path>
+                <g id="Rectangle-Copy-6">
+                    <use fill="#0F8C4D" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                </g>
+                <g id="Rectangle-Copy">
+                    <use fill="#095931" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                </g>
+                <g id="Rectangle-Copy-7">
+                    <use fill="#15BF6A" fill-rule="evenodd" xlink:href="#path-5"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                </g>
+                <polygon id="Triangle" fill="#FFFFFF" points="193 20 203 10 183 10"></polygon>
+                <g id="Rectangle-Copy-8">
+                    <use fill="#1AF286" fill-rule="evenodd" xlink:href="#path-7"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                </g>
+                <path d="M277,10 L329,10 C331.209139,10 333,11.790861 333,14 L333,118 C333,120.209139 331.209139,122 329,122 L277,122 L277,10 Z" id="Rectangle-Copy-9" fill="#1CFF8D"></path>
+            </g>
+        </g>
+    </g>
+</svg>
