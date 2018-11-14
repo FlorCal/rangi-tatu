@@ -72,11 +72,6 @@
 
     @media #{$phone} {
         grid-template-columns: 20px 1fr 20px;
-        overflow-y: scroll;
-
-        &::-webkit-scrollbar {
-            display: none;
-        }
     }
 
     @media #{$tablet} {

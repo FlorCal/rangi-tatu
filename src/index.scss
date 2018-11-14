@@ -58,6 +58,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     color: $cGrey;
     -webkit-overflow-scrolling: touch;
+    overflow: hidden;
 
     .fBlack {
         font-family: fBold;
