@@ -34,14 +34,15 @@
         grid-auto-rows: 240px;
     }
 
-    .noSchemeMessage {
+    .noSchemesMessage {
         grid-area: schemes;
+        width: 420px;
         font-size: $sFontbig;
         justify-self: center;
         text-align: center;
         line-height: 40px;
         word-spacing: .5px;
-        padding-top: 350px;
+        padding-top: 310px;
 
 
     }
