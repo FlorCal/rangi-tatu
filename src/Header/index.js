@@ -16,6 +16,7 @@ class HeaderComponent extends React.Component {
     render() {
 
         let isBaseColorDark = helpers.isBaseColorDark(this.props)
+        
         let baseColor = this.props.baseColor.length >= 3 ? this.props.baseColor : null
 
         let textColor = isBaseColorDark ? '#ffffff' : '#333333'

@@ -1,30 +1,25 @@
 import React from 'react'
-import convert from 'color-convert'
 import bowlWhite from '../app/img/bowl-white.svg'
+
+//helpers
+import helpers from '../app/helpers'
 
 // assets
 import bowl from '../app/img/bowl.svg'
 
 class LoadingComponent extends React.Component {
 
-    isBaseColorDark() {
-        let darkColor = false
-        if (this.props.baseColor.length >= 3 && this.props.schemesCombinations.length >= 0) {
-            let color  = convert.hex.hsl(this.props.baseColor)
-            if (color[2] < 50) darkColor = true
-        }
-        return darkColor
-    }
-
     render() {
+
+        let isBaseColorDark = helpers.isBaseColorDark(this.props)
 
         let baseColor = this.props.baseColor.length >= 3 ? this.props.baseColor : null
 
-        let textColor = this.isBaseColorDark() ? '#ffffff' : '#333333'
+        let textColor = isBaseColorDark ? '#ffffff' : '#333333'
 
         return (
             <div className='LoadingComponent' style={{background: baseColor, color: textColor}}>
-                <img className='bowl' src={this.isBaseColorDark() ? bowlWhite : bowl} />
+                <img className='bowl' src={isBaseColorDark ? bowlWhite : bowl} />
                 <div className='stir'>Stir stir stir...</div>
             </div>
         )
