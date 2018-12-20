@@ -4,7 +4,7 @@ import React from 'react'
 import Button from '../Button'
 
 //assets
-import hue10 from '../app/img/hue10.svg'
+import hue10 from '../app/img/hue10.png'
 // import hue15 from '../app/img/hue15.svg'
 // import hue20 from '../app/img/hue20.svg'
 
@@ -30,7 +30,9 @@ class HueInfoComponent extends React.Component {
                     <div>
                         <div className='wrapper'>
                         </div>
-                        <img src={hue10}/>
+                        <div className='hueFan' style={{
+                            background: `url(${hue10}) 0% 0% / contain no-repeat`
+                        }} />
                     </div>
                 </div>
 

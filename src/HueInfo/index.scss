@@ -69,7 +69,14 @@
             border-bottom: .5px solid $cWhite;
         }
 
-    }
+        .hueFan {
+            width: 300px;
+            height: 150px;
+            border: 1px solid red;
+            margin: auto;
+        }
+
+    } // about
 
 
     @media #{$phone} {
