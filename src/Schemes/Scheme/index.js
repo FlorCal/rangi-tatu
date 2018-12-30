@@ -42,6 +42,10 @@ class SchemeComponent extends React.Component {
                         </CopyToClipboard>
                     ))}
 
+                    <div className='copyMessage' style={{color:baseColor}}>
+                        {this.state.copied ? <span>Copied!</span> : <span>Click or tap to copy</span>}
+                    </div>
+
                 </div>
 
             </div>
