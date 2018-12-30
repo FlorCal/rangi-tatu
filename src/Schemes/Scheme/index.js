@@ -7,8 +7,13 @@ class SchemeComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            copied: false
+            copied: false,
+            hoveredHex: null
         }
+    }
+
+    onColorMouseEnter(hex) {
+        this.setState({hoveredHex:hex})
     }
 
     plotHexs() {
@@ -27,9 +32,12 @@ class SchemeComponent extends React.Component {
 
                 <div className='colors'>
                     {this.props.colors.map((color, i) =>(
-                        <div key={i} style={{
-                            background: `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`
-                        }}/>
+                        <div
+                            onMouseEnter={this.onColorMouseEnter.bind(this, '#' + convert.hsl.hex(color))}
+                            key={i}
+                            style={{
+                                background: `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`
+                            }}/>
                     ))}
                 </div>
 

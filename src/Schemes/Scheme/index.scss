@@ -10,6 +10,7 @@
         position: relative;
         height: inherit;
         padding: 0 20px;
+        pointer-events: none;
 
         .name {
             font-size: 48px;
