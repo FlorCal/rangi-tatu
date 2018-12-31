@@ -32,23 +32,31 @@ class SchemeComponent extends React.Component {
 
                 <div className='colors'>
                     {this.props.colors.map((color, i) =>(
-                        <div
-                            onMouseEnter={this.onColorMouseEnter.bind(this, '#' + convert.hsl.hex(color))}
-                            key={i}
-                            style={{
-                                background: `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`
-                            }}/>
+                        <CopyToClipboard key={i} text={'#' + convert.hsl.hex(color)} onCopy={() => this.setState({copied: true})}>
+                            <div
+                                onMouseEnter={this.onColorMouseEnter.bind(this, '#' + convert.hsl.hex(color))}
+                                key={i}
+                                style={{
+                                    background: `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`
+                                }}/>
+                        </CopyToClipboard>
                     ))}
                 </div>
 
                 <div className="texts">
                     <div className='name' style={{color:baseColor}}>{this.props.name}</div>
 
-                    {this.plotHexs().map( (hex, i) => (
-                        <CopyToClipboard key={i} text={hex} onCopy={() => this.setState({copied: true})}>
-                            <span className='hue' style={{color:baseColor}}>{hex}{ i < (this.plotHexs().length - 1) ? ' / ' : ''}</span>
-                        </CopyToClipboard>
-                    ))}
+                    <div style={{marginLeft: -8}}>
+                        {this.plotHexs().map( (hex, i) => (
+                            <div className='hue'
+                                key={i}
+                                style={{color:baseColor}}>
+                                <div className='hexCode'>{hex}</div>
+                                { i < (this.plotHexs().length - 1) ? ' / ' : ''}
+                            </div>
+
+                        ))}
+                    </div>
 
                     <div className='copyMessage' style={{color:baseColor}}>
                         {this.state.copied ? <span>Copied!</span> : <span>Click or tap to copy</span>}
