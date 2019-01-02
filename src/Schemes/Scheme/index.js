@@ -7,13 +7,13 @@ class SchemeComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            copied: false,
+            copied: null,
             hoveredHex: null
         }
     }
 
     onColorMouseEnter(hex) {
-        this.setState({hoveredHex:hex})
+        this.setState({hoveredHex:hex, copied: false})
     }
 
     plotHexs() {
@@ -32,6 +32,16 @@ class SchemeComponent extends React.Component {
                 {backgroundColor: baseColor, color: hex} : {}
         }
 
+        let messageToBeDisplayed = () => {
+            if (this.state.copied === null) {
+                return ''
+            }
+            if (this.state.copied === false){
+                return 'Click or tap to copy'
+            }
+            return 'Copied!'
+        }
+
         return(
             <div className='SchemeComponent'>
 
@@ -45,7 +55,7 @@ class SchemeComponent extends React.Component {
                                 onMouseEnter={this.onColorMouseEnter.bind(this, '#' + convert.hsl.hex(color))}
                                 onMouseLeave={() => this.setState({
                                     hoveredHex: null,
-                                    copied: false
+                                    copied: null
                                 })}
                                 style={{
                                     background: `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`,
@@ -70,7 +80,7 @@ class SchemeComponent extends React.Component {
                     </div>
 
                     <div className='copyMessage' style={{color:baseColor}}>
-                        {this.state.copied ? <span>Copied!</span> : <span>Click or tap to copy</span>}
+                        <span>{messageToBeDisplayed()}</span>
                     </div>
 
                 </div>
