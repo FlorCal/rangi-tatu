@@ -27,17 +27,28 @@ class SchemeComponent extends React.Component {
     render() {
         let baseColor = this.props.hexColor
 
+        let highlightHexBackground = hex => {
+            return hex === this.state.hoveredHex ?
+                {backgroundColor: baseColor, color: hex} : {}
+        }
+
         return(
             <div className='SchemeComponent'>
 
                 <div className='colors'>
                     {this.props.colors.map((color, i) =>(
-                        <CopyToClipboard key={i} text={'#' + convert.hsl.hex(color)} onCopy={() => this.setState({copied: true})}>
+                        <CopyToClipboard
+                            key={i}
+                            text={'#' + convert.hsl.hex(color)}
+                            onCopy={() => this.setState({copied: true})}>
                             <div
                                 onMouseEnter={this.onColorMouseEnter.bind(this, '#' + convert.hsl.hex(color))}
-                                key={i}
+                                onMouseLeave={() => this.setState({
+                                    hoveredHex: null,
+                                    copied: false
+                                })}
                                 style={{
-                                    background: `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`
+                                    background: `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`,
                                 }}/>
                         </CopyToClipboard>
                     ))}
@@ -51,7 +62,7 @@ class SchemeComponent extends React.Component {
                             <div className='hue'
                                 key={i}
                                 style={{color:baseColor}}>
-                                <div className='hexCode'>{hex}</div>
+                                <div className='hexCode' style={highlightHexBackground(hex)}>{hex}</div>
                                 { i < (this.plotHexs().length - 1) ? ' / ' : ''}
                             </div>
 
