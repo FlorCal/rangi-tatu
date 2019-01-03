@@ -58,6 +58,8 @@ class SchemeComponent extends React.Component {
                             <div
                                 onMouseEnter={this.onColorMouseEnter.bind(this, '#' + convert.hsl.hex(color))}
                                 onMouseLeave={this.onColorMouseLeave.bind(this)}
+                                onTouchStart={this.onColorMouseEnter.bind(this, '#' + convert.hsl.hex(color))}
+                                onTouchEnd={this.onColorMouseLeave.bind(this)}
                                 style={{
                                     background: `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`,
                                 }}/>
