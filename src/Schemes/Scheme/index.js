@@ -16,6 +16,10 @@ class SchemeComponent extends React.Component {
         this.setState({hoveredHex:hex, copied: false})
     }
 
+    onColorMouseLeave() {
+        this.setState({hoveredHex:null, copied: null})
+    }
+
     plotHexs() {
         let hexArr = []
         this.props.colors.forEach(color => {
@@ -53,10 +57,7 @@ class SchemeComponent extends React.Component {
                             onCopy={() => this.setState({copied: true})}>
                             <div
                                 onMouseEnter={this.onColorMouseEnter.bind(this, '#' + convert.hsl.hex(color))}
-                                onMouseLeave={() => this.setState({
-                                    hoveredHex: null,
-                                    copied: null
-                                })}
+                                onMouseLeave={this.onColorMouseLeave.bind(this)}
                                 style={{
                                     background: `hsl(${color[0]}, ${color[1]}%, ${color[2]}%)`,
                                 }}/>
