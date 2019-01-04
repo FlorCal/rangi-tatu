@@ -34,7 +34,8 @@
         }
 
         .copyMessage {
-            padding-top: 80px;
+            position: absolute;
+            bottom: 10px;
         }
 
     } // texts
@@ -52,6 +53,19 @@
 
         .hue {
             font-size: 14px;
+        }
+    }
+
+    @media #{$phone} {
+        .texts {
+            .copyMessage {
+                position: absolute;
+                bottom: -40px;
+            }
+        }
+
+        .colors {
+            height: 300px;
         }
     }
 
