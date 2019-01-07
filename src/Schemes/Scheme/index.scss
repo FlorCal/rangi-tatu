@@ -13,7 +13,7 @@
         pointer-events: none;
 
         .name {
-            font-size: 36px;
+            font-size: 48px;
             line-height: 1.2;
             padding-top: 40px;
             margin: 0;
@@ -54,6 +54,15 @@
         .hue {
             font-size: 14px;
         }
+    }
+
+    @media #{$phone} {
+        .texts {
+            .name {
+                font-size: 36px;
+            }
+        }
+
     }
 
 }// SchemeComponent
