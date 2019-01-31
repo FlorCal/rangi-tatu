@@ -8,7 +8,6 @@ export default {
         if (props.baseColor.length >= 3 && props.schemesCombinations.length >= 0) {
 
             let colorContrast = contrast.score(props.baseColor, '#fff')
-            console.log(colorContrast);
             if (colorContrast === 'AA' || colorContrast === 'AAA') darkColor = true
         }
         return darkColor
