@@ -2,8 +2,10 @@ import React from 'react'
 
 //components
 import Button from '../Button'
+import Selector from '../Picker/Selector'
 
 //assets
+import constants from '../../constants'
 import hue10 from '../app/img/hue10.png'
 // import hue15 from '../app/img/hue15.svg'
 // import hue20 from '../app/img/hue20.svg'
@@ -27,13 +29,16 @@ class HueInfoComponent extends React.Component {
 
                     <p>Test it out below with our little tool to get a better idea.</p>
 
-                    <div>
-                        <div className='wrapper'>
-                        </div>
-                        <div className='hueFan' style={{
-                            background: `url(${hue10}) 0% 0% / contain no-repeat`
-                        }} />
-                    </div>
+                    <Selector
+                        options={constants.SelectorOptions.hueOptions}
+                        active={this.props.hue}
+                        click={this.props.changeHue}/>
+
+                    <div className='hueFan' style={{
+                        background: `url(${hue10}) 0% 0% / contain no-repeat`
+                    }} />
+
+
                 </div>
 
             </div>
@@ -43,3 +48,9 @@ class HueInfoComponent extends React.Component {
 } // HueInfoComponent
 
 export default HueInfoComponent
+
+
+// <Selector
+//     options={constants.SelectorOptions.hueOptions}
+//     active={this.props.hue}
+//     click={this.props.changeHue}/>
