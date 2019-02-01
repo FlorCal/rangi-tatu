@@ -5,7 +5,7 @@ class SelectorComponent extends React.Component {
         return (
             <div className={'SelectorComponent ' + (this.props.passClass ? this.props.passClass : '') }>
                 <div className='title'>{this.props.title}
-                    <a onClick={this.props.clicked}>huh?</a>
+                    <a onClick={this.props.clicked}>{this.props.link}</a>
                 </div>
                 <div className='wrapper'>
                     {this.props.options.map((option, i) => <button

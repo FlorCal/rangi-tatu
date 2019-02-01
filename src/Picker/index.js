@@ -40,6 +40,7 @@ class PickerComponent extends React.Component {
                     <Selector
                         passClass='standard'
                         title='WCAG Standard'
+                        link= 'huh?'
                         clicked={this.props.openWcagInfo.bind(this)}
                         options={['WCAG AA', 'WCAG AAA']}
                         active={this.props.standard}
@@ -48,6 +49,7 @@ class PickerComponent extends React.Component {
                     <Selector
                         passClass='hue'
                         title='Hue Step'
+                        link= 'huh?'
                         clicked={this.props.openHueInfo.bind(this)}
                         options={constants.SelectorOptions.hueOptions}
                         active={this.props.hue}
@@ -56,6 +58,7 @@ class PickerComponent extends React.Component {
                     <Selector
                         passClass='saturation'
                         title='Saturation Step'
+                        link= 'huh?'
                         options={constants.SelectorOptions.saturationOptions}
                         active={this.props.saturation}
                         click={this.props.changeSaturation}/>
@@ -63,6 +66,7 @@ class PickerComponent extends React.Component {
                     <Selector
                         passClass='shade'
                         title='Shade/Light Step'
+                        link= 'huh?'
                         clicked={this.props.openLightInfo.bind(this)}
                         options={constants.SelectorOptions.shadeOptions}
                         active={this.props.shade}

@@ -260,7 +260,8 @@ class Renderer extends React.Component {
 
                 {this.state.hueInfo ?
                     <HueInfo
-                        closeHueInfo={this.closeHueInfo.bind(this)}/>
+                        closeHueInfo={this.closeHueInfo.bind(this)}
+                        changeHue={this.changeHue.bind(this)}/>
                     : null}
 
                 {this.state.lightInfo ?
