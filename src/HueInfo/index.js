@@ -11,8 +11,8 @@ import hue10 from '../app/img/hue10.png'
 // import hue20 from '../app/img/hue20.svg'
 
 class HueInfoComponent extends React.Component {
-
     render() {
+
         return (
             <div className='HueInfoComponent'>
 
@@ -29,10 +29,12 @@ class HueInfoComponent extends React.Component {
 
                     <p>Test it out below with our little tool to get a better idea.</p>
 
-                    <Selector
-                        options={constants.SelectorOptions.hueOptions}
-                        active={this.props.hue}
-                        click={this.props.changeHue}/>
+                    <div className='wrapperSelector'>
+                        <Selector
+                            options={constants.SelectorOptions.hueOptions}
+                            active={this.props.hue}
+                            click={this.props.changeHue}/>
+                    </div>
 
                     <div className='hueFan' style={{
                         background: `url(${hue10}) 0% 0% / contain no-repeat`

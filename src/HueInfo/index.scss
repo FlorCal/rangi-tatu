@@ -69,10 +69,33 @@
             border-bottom: .5px solid $cWhite;
         }
 
+        .wrapperSelector {
+            width: 300px;
+            height: 10px;
+            background-color: $cWhite;
+            margin-left: 50%;
+            transform: translate(-50%);
+            position: relative;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+
+            .SelectorComponent {
+                height: 44px;
+                padding-bottom: 40px;
+                position: absolute;
+                top: -35px;
+                left: -10px;
+
+                .wrapper {
+                    width: 280px;
+                }
+            }
+        }
+
         .hueFan {
             width: 300px;
             height: 150px;
-            border: 1px solid red;
+            // border: 1px solid red;
             margin: auto;
         }
 

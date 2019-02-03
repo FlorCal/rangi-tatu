@@ -38,6 +38,9 @@ class Renderer extends React.Component {
             hue: '15°',
             saturation: '15%',
             shade: '15%',
+            hueTool: '10',
+            lightTool: '10',
+            saturationTool: '10',
             /*
             [ //newSchemesCombinations
               { //
@@ -261,7 +264,8 @@ class Renderer extends React.Component {
                 {this.state.hueInfo ?
                     <HueInfo
                         closeHueInfo={this.closeHueInfo.bind(this)}
-                        changeHue={this.changeHue.bind(this)}/>
+                        changeHue={this.changeHue.bind(this)}
+                        hue={this.state.hue} />
                     : null}
 
                 {this.state.lightInfo ?
