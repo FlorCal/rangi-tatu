@@ -4,9 +4,6 @@ import React from 'react'
 import Button from '../Button'
 
 //assets
-import light10 from '../app/img/light10.svg'
-import light15 from '../app/img/light15.svg'
-import light20 from '../app/img/light20.svg'
 
 class LightInfoComponent extends React.Component {
 
@@ -31,7 +28,6 @@ class LightInfoComponent extends React.Component {
 
                         <div className='wrapper'>
                         </div>
-                        <img src={light10}/>
 
                     </div>
                 </div>

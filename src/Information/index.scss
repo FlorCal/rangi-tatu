@@ -1,4 +1,4 @@
-.HueInfoComponent {
+.InformationComponent {
     position: fixed;
     background: rgba(51, 51, 51, .9);
     width: 100vw;
@@ -61,12 +61,6 @@
             font-size: 18px;
             text-align: center;
             font-family: fRegular;
-        }
-
-        span {
-            cursor: pointer;
-            display: inline-block;
-            border-bottom: .5px solid $cWhite;
         }
 
         .wrapperSelector {

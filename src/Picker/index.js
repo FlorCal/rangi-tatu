@@ -50,7 +50,7 @@ class PickerComponent extends React.Component {
                         passClass='hue'
                         title='Hue Step'
                         link= 'huh?'
-                        clicked={this.props.openHueInfo.bind(this)}
+                        clicked={this.props.openInformation.bind(this)}
                         options={constants.SelectorOptions.hueOptions}
                         active={this.props.hue}
                         click={this.props.changeHue}/>

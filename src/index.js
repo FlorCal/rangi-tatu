@@ -14,8 +14,8 @@ import Picker from './Picker'
 import Intro from './Intro'
 import About from './About'
 import WCAGInfo from './WCAGInfo'
-import HueInfo from './HueInfo'
-import LightInfo from './LightInfo'
+import Information from './Information'
+
 
 class Renderer extends React.Component {
 
@@ -30,7 +30,7 @@ class Renderer extends React.Component {
 
             about: false, // application/team information that overlays whole app
             wcagInfo: false,
-            hueInfo: false,
+            information: false,
             lightInfo:false,
             hexCode: '',
             baseColor: '', // will always start with #
@@ -38,9 +38,6 @@ class Renderer extends React.Component {
             hue: '15°',
             saturation: '15%',
             shade: '15%',
-            hueTool: '10',
-            lightTool: '10',
-            saturationTool: '10',
             /*
             [ //newSchemesCombinations
               { //
@@ -178,12 +175,12 @@ class Renderer extends React.Component {
         this.setState({wcagInfo: false})
     }
 
-    openHueInfo() {
-        this.setState({hueInfo: true})
+    openInformation() {
+        this.setState({information: true})
     }
 
-    closeHueInfo() {
-        this.setState({hueInfo: false})
+    closeInformation() {
+        this.setState({information: false})
     }
 
     openLightInfo() {
@@ -252,7 +249,7 @@ class Renderer extends React.Component {
                     createSchemes={this.createSchemes.bind(this)}
                     baseColorChange={this.baseColorChange.bind(this)}
                     openWcagInfo={this.openWcagInfo.bind(this)}
-                    openHueInfo={this.openHueInfo.bind(this)}
+                    openInformation={this.openInformation.bind(this)}
                     openLightInfo={this.openLightInfo.bind(this)}
                 />
 
@@ -261,16 +258,11 @@ class Renderer extends React.Component {
                         closeWcagInfo={this.closeWcagInfo.bind(this)}/>
                     : null}
 
-                {this.state.hueInfo ?
-                    <HueInfo
-                        closeHueInfo={this.closeHueInfo.bind(this)}
+                {this.state.information ?
+                    <Information
+                        closeInformation={this.closeInformation.bind(this)}
                         changeHue={this.changeHue.bind(this)}
                         hue={this.state.hue} />
-                    : null}
-
-                {this.state.lightInfo ?
-                    <LightInfo
-                        closeLightInfo={this.closeLightInfo.bind(this)}/>
                     : null}
 
                 {this.state.intro ?
