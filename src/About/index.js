@@ -22,7 +22,7 @@ class AboutComponent extends React.Component {
     }
 
     onFlorClick() {
-        var win = window.open('https://github.com/FlorCal', '_blank');
+        var win = window.open('http://florcalderon.com/', '_blank');
         win.focus();
     }
 
