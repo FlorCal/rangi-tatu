@@ -2,40 +2,47 @@ import React from 'react'
 
 //components
 import Button from '../Button'
-import Selector from '../Picker/Selector'
+// import Selector from '../Picker/Selector'
 
 //assets
-import constants from '../../constants'
+// import constants from '../../constants'
 
 class InformationComponent extends React.Component {
 
+    renderStandard() {
+        // return ()
+    }
+
+    renderHue() {
+        // return ()
+    }
+
+    renderSaturation() {
+        // return ()
+    }
+
+    renderShade() {
+        // return ()
+    }
+
     render() {
+
+        let body = null
+        if(this.props.information === 'standard') body = this.renderStandard()
+        if(this.props.information === 'hue') body = this.renderHue()
+        if(this.props.information === 'saturation') body = this.renderSaturation()
+        if(this.props.information === 'shade') body = this.renderShade()
+
 
         return (
             <div className='InformationComponent'>
 
                 <Button
                     title='Take me back'
-                    click={this.props.closeInformation}
+                    click={this.props.onBackClick}
                 />
 
-                <div className='about'>
-
-                    <div>{this.props.title}</div>
-
-                    <p>{this.props.info}</p>
-
-                    <p>{this.props.testBelow}</p>
-
-                    <div className='wrapperSelector'>
-                        <Selector
-                            options={constants.SelectorOptions.hueOptions}
-                            active={this.props.hue}
-                            click={this.props.changeHue}/>
-                    </div>
-
-
-                </div>
+                <div className='about'>{body}</div>
 
             </div>
         )
@@ -44,3 +51,11 @@ class InformationComponent extends React.Component {
 } // InformationComponent
 
 export default InformationComponent
+
+
+//     <div className='wrapperSelector'>
+//         <Selector
+//             options={constants.SelectorOptions.hueOptions}
+//             active={this.props.hue}
+//             click={this.props.changeHue}/>
+//     </div>

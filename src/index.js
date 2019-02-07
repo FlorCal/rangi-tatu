@@ -13,7 +13,6 @@ import Container from './Container'
 import Picker from './Picker'
 import Intro from './Intro'
 import About from './About'
-import WCAGInfo from './WCAGInfo'
 import Information from './Information'
 
 
@@ -29,9 +28,9 @@ class Renderer extends React.Component {
             schemes: false, // schemes page appear  or not appear
 
             about: false, // application/team information that overlays whole app
-            wcagInfo: false,
+
             information: false,
-            lightInfo:false,
+
             hexCode: '',
             baseColor: '', // will always start with #
             standard: 'WCAG AA',
@@ -167,28 +166,12 @@ class Renderer extends React.Component {
         this.setState({intro: false})
     }
 
-    openWcagInfo() {
-        this.setState({wcagInfo: true})
-    }
-
-    closeWcagInfo() {
-        this.setState({wcagInfo: false})
-    }
-
-    openInformation() {
-        this.setState({information: true})
+    openInformation(whichPage) {
+        this.setState({information: whichPage})
     }
 
     closeInformation() {
         this.setState({information: false})
-    }
-
-    openLightInfo() {
-        this.setState({lightInfo: true})
-    }
-
-    closeLightInfo() {
-        this.setState({lightInfo: false})
     }
 
     changeStandard(val) {
@@ -248,21 +231,12 @@ class Renderer extends React.Component {
                     changeShade={this.changeShade.bind(this)}
                     createSchemes={this.createSchemes.bind(this)}
                     baseColorChange={this.baseColorChange.bind(this)}
-                    openWcagInfo={this.openWcagInfo.bind(this)}
                     openInformation={this.openInformation.bind(this)}
-                    openLightInfo={this.openLightInfo.bind(this)}
                 />
 
-                {this.state.wcagInfo ?
-                    <WCAGInfo
-                        closeWcagInfo={this.closeWcagInfo.bind(this)}/>
-                    : null}
-
                 {this.state.information ?
-                    <Information
-                        closeInformation={this.closeInformation.bind(this)}
-                        changeHue={this.changeHue.bind(this)}
-                        hue={this.state.hue} />
+                    <Information {...this.state}
+                        onBackClick={this.closeInformation.bind(this)}/>
                     : null}
 
                 {this.state.intro ?

@@ -41,7 +41,7 @@ class PickerComponent extends React.Component {
                         passClass='standard'
                         title='WCAG Standard'
                         link= 'huh?'
-                        clicked={this.props.openWcagInfo.bind(this)}
+                        onLinkclick={this.props.openInformation.bind(this, 'standard')}
                         options={['WCAG AA', 'WCAG AAA']}
                         active={this.props.standard}
                         click={this.props.changeStandard}/>
@@ -50,7 +50,7 @@ class PickerComponent extends React.Component {
                         passClass='hue'
                         title='Hue Step'
                         link= 'huh?'
-                        clicked={this.props.openInformation.bind(this)}
+                        onLinkclick={this.props.openInformation.bind(this, 'hue')}
                         options={constants.SelectorOptions.hueOptions}
                         active={this.props.hue}
                         click={this.props.changeHue}/>
@@ -59,6 +59,7 @@ class PickerComponent extends React.Component {
                         passClass='saturation'
                         title='Saturation Step'
                         link= 'huh?'
+                        onLinkclick={this.props.openInformation.bind(this, 'saturation')}
                         options={constants.SelectorOptions.saturationOptions}
                         active={this.props.saturation}
                         click={this.props.changeSaturation}/>
@@ -67,7 +68,7 @@ class PickerComponent extends React.Component {
                         passClass='shade'
                         title='Shade/Light Step'
                         link= 'huh?'
-                        clicked={this.props.openLightInfo.bind(this)}
+                        onLinkclick={this.props.openInformation.bind(this, 'shade')}
                         options={constants.SelectorOptions.shadeOptions}
                         active={this.props.shade}
                         click={this.props.changeShade}/>
