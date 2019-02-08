@@ -92,11 +92,36 @@
             }
         }
 
-        // .visual {
-        //     .hue10 {
-        //         background: url('../app/img/hue10.png');
-        //     }
-        // }
+        .visual {
+            &.hue10 {
+                background: url('./app/img/hue10.png') 0% 0% / contain no-repeat;
+
+            }
+            &.hue15 {
+                background: url('./app/img/hue15.png') 0% 0% / contain no-repeat;
+            }
+            &.hue20 {
+                background: url('./app/img/hue20.png') 0% 0% / contain no-repeat;
+            }
+            &.saturation10 {
+                background: url('./app/img/saturation10.png')  0% 0% / contain no-repeat;
+            }
+            &.saturation15 {
+                background: url('./app/img/saturation15.png') 0% 0% / contain no-repeat;
+            }
+            &.saturation20 {
+                background: url('./app/img/saturation20.png') 0% 0% / contain no-repeat;
+            }
+            &.shade10 {
+                background: url('./app/img/shade10.png') 0% 0% / contain no-repeat;
+            }
+            &.shade15 {
+                background: url('./app/img/shade15.png') 0% 0% / contain no-repeat;
+            }
+            &.shade20 {
+                background: url('./app/img/shade20.png') 0% 0% / contain no-repeat;
+            }
+        }
 
     } // about
 

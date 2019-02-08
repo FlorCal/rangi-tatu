@@ -36,7 +36,14 @@ class InformationComponent extends React.Component {
 
                 <p>Test it out below with our little tool to get a better idea.</p>
 
-                <div className={'visual hue' + this.props.hue.replace('°', '')}></div>
+                <div className={'visual hue' + this.props.hue.replace('°', '')}>
+                    <div className='wrapperSelector'>
+                        <Selector
+                            options={constants.SelectorOptions.hueOptions}
+                            active={this.props.hue}
+                            click={this.props.changeHue}/>
+                    </div>
+                </div>
 
             </div>
         )
@@ -51,7 +58,14 @@ class InformationComponent extends React.Component {
 
                 <p>Test it out below with our little tool to get a better idea.</p>
 
-                <div className={'visual saturation' + this.props.saturation.replace('%', '')}></div>
+                <div className={'visual saturation' + this.props.saturation.replace('%', '')}>
+                    <div className='wrapperSelector'>
+                        <Selector
+                            options={constants.SelectorOptions.saturationOptions}
+                            active={this.props.saturation}
+                            click={this.props.changeSaturation}/>
+                    </div>
+                </div>
             </div>
         )
     }
@@ -65,7 +79,14 @@ class InformationComponent extends React.Component {
 
                 <p>Test it out below with our little tool to get a better idea.</p>
 
-                <div className={'visual shade' + this.props.shade.replace('%', '')}></div>
+                <div className={'visual shade' + this.props.shade.replace('%', '')}>
+                    <div className='wrapperSelector'>
+                        <Selector
+                            options={constants.SelectorOptions.shadeOptions}
+                            active={this.props.shade}
+                            click={this.props.changeShade}/>
+                    </div>
+                </div>
             </div>
         )
     }

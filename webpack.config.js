@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: './src/index.js',
+
     output: {
         path: path.join(__dirname, '/'),
         filename: 'index_bundle.js'
@@ -30,7 +31,8 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: 'assets/'
+                        outputPath: 'assets/',
+                        publicPath: 'assets/'
                     }
                 }]
             }

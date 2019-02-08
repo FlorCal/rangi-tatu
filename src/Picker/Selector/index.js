@@ -1,6 +1,12 @@
 import React from 'react'
 
 class SelectorComponent extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.displayName = 'SelectorComponent'
+    }
+
     render() {
         return (
             <div className={'SelectorComponent ' + (this.props.passClass ? this.props.passClass : '') }>

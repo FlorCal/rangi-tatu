@@ -236,7 +236,11 @@ class Renderer extends React.Component {
 
                 {this.state.information ?
                     <Information {...this.state}
-                        onBackClick={this.closeInformation.bind(this)}/>
+                        onBackClick={this.closeInformation.bind(this)}
+                        changeHue={this.changeHue.bind(this)}
+                        changeSaturation={this.changeSaturation.bind(this)}
+                        changeShade={this.changeShade.bind(this)}/>
+
                     : null}
 
                 {this.state.intro ?
