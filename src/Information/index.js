@@ -2,10 +2,10 @@ import React from 'react'
 
 //components
 import Button from '../Button'
-// import Selector from '../Picker/Selector'
+import Selector from '../Picker/Selector'
 
 //assets
-// import constants from '../../constants'
+import constants from '../../constants'
 
 class InformationComponent extends React.Component {
 
@@ -27,15 +27,47 @@ class InformationComponent extends React.Component {
     }
 
     renderHue() {
-        // return ()
+
+        return (
+            <div>
+                <div>What’s Hue Step?</div>
+
+                <p>Hue is also known as color or the position on a color wheel. Hue step is the degree of separation between different colors on the wheel. So the wider the hue step, the larger the variance of colors but lower the number of combinations.</p>
+
+                <p>Test it out below with our little tool to get a better idea.</p>
+
+                <div className={'visual hue' + this.props.hue.replace('°', '')}></div>
+
+            </div>
+        )
     }
 
     renderSaturation() {
-        // return ()
+        return (
+            <div>
+                <div>What’s Saturation Step?</div>
+
+                <p>Saturation is the intensity of a color, from pure, or super bright, being 100% to gray, 0%, all while maintaining the same lightness level. The lower the saturation the more washed out colors tend to look. So the higher the step, the quicker the color gets to gray.</p>
+
+                <p>Test it out below with our little tool to get a better idea.</p>
+
+                <div className={'visual saturation' + this.props.saturation.replace('%', '')}></div>
+            </div>
+        )
     }
 
     renderShade() {
-        // return ()
+        return (
+            <div>
+                <div>What’s Shade/Light Step?</div>
+
+                <p>Shade and or Light is how close to being fully luminated (100%, white)   or dark a color is (0%, black). So the higher the step the more drastic the lighter or darker a color becomes.</p>
+
+                <p>Test it out below with our little tool to get a better idea.</p>
+
+                <div className={'visual shade' + this.props.shade.replace('%', '')}></div>
+            </div>
+        )
     }
 
     onWcagAAClick() {
