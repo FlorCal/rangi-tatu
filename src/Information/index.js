@@ -58,7 +58,8 @@ class InformationComponent extends React.Component {
 
                 <p>Test it out below with our little tool to get a better idea.</p>
 
-                <div className={'visual saturation' + this.props.saturation.replace('%', '')}>
+                <div className={'visual saturation' + this.props.saturation.replace('%', '')}
+                    style={{height:140}}>
                     <div className='wrapperSelector'>
                         <Selector
                             options={constants.SelectorOptions.saturationOptions}
@@ -79,7 +80,8 @@ class InformationComponent extends React.Component {
 
                 <p>Test it out below with our little tool to get a better idea.</p>
 
-                <div className={'visual shade' + this.props.shade.replace('%', '')}>
+                <div className={'visual shade' + this.props.shade.replace('%', '')}
+                    style={{height:140}}>
                     <div className='wrapperSelector'>
                         <Selector
                             options={constants.SelectorOptions.shadeOptions}

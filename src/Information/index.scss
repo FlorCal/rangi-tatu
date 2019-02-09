@@ -93,35 +93,20 @@
         }
 
         .visual {
-            &.hue10 {
-                background: url('./app/img/hue10.png') 0% 0% / contain no-repeat;
+            @mixin vizImage($value) { //mixin
+                height: 160px;
+                width: 300px;
+                background: url('./app/img/#{$value}.png') no-repeat;
+                background-position: bottom center;
+                margin: 0 auto;
+            }
 
+            $list: hue10, hue15, hue20, saturation10, saturation15, saturation20, shade10, shade15, shade20;
+
+            @each $visual in $list { // for each loop
+                &.#{$visual} { @include  vizImage(#{$visual}); }
             }
-            &.hue15 {
-                background: url('./app/img/hue15.png') 0% 0% / contain no-repeat;
-            }
-            &.hue20 {
-                background: url('./app/img/hue20.png') 0% 0% / contain no-repeat;
-            }
-            &.saturation10 {
-                background: url('./app/img/saturation10.png')  0% 0% / contain no-repeat;
-            }
-            &.saturation15 {
-                background: url('./app/img/saturation15.png') 0% 0% / contain no-repeat;
-            }
-            &.saturation20 {
-                background: url('./app/img/saturation20.png') 0% 0% / contain no-repeat;
-            }
-            &.shade10 {
-                background: url('./app/img/shade10.png') 0% 0% / contain no-repeat;
-            }
-            &.shade15 {
-                background: url('./app/img/shade15.png') 0% 0% / contain no-repeat;
-            }
-            &.shade20 {
-                background: url('./app/img/shade20.png') 0% 0% / contain no-repeat;
-            }
-        }
+        } // visual
 
     } // about
 
