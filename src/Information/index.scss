@@ -48,7 +48,7 @@
         color: $cWhite;
         align-self: center;
 
-        div {
+        .title {
             font-size: 40px;
             text-align: center;
             padding-bottom: 50px;
@@ -71,7 +71,7 @@
 
         .wrapperSelector {
             width: 300px;
-            height: 10px;
+            height: 64px;
             background-color: $cWhite;
             margin-left: 50%;
             transform: translate(-50%);
@@ -99,6 +99,7 @@
                 background: url('./app/img/#{$value}.png') no-repeat;
                 background-position: bottom center;
                 margin: 0 auto;
+                padding-bottom: 50px;
             }
 
             $list: hue10, hue15, hue20, saturation10, saturation15, saturation20, shade10, shade15, shade20;

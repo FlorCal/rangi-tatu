@@ -13,7 +13,7 @@ class InformationComponent extends React.Component {
 
         return (
             <div>
-                <div>What’s WCAG?</div>
+                <div className='title'>What’s WCAG?</div>
                 <p>
           WCAG, is short for Web Content Accessibility Guidelines. What does that even mean you ask? They’re set of documents that explain how to make web content more accessible to people with disabilities.
                 </p>
@@ -30,7 +30,7 @@ class InformationComponent extends React.Component {
 
         return (
             <div>
-                <div>What’s Hue Step?</div>
+                <div className='title'>What’s Hue Step?</div>
 
                 <p>Hue is also known as color or the position on a color wheel. Hue step is the degree of separation between different colors on the wheel. So the wider the hue step, the larger the variance of colors but lower the number of combinations.</p>
 
@@ -52,7 +52,7 @@ class InformationComponent extends React.Component {
     renderSaturation() {
         return (
             <div>
-                <div>What’s Saturation Step?</div>
+                <div className='title'>What’s Saturation Step?</div>
 
                 <p>Saturation is the intensity of a color, from pure, or super bright, being 100% to gray, 0%, all while maintaining the same lightness level. The lower the saturation the more washed out colors tend to look. So the higher the step, the quicker the color gets to gray.</p>
 
@@ -74,7 +74,7 @@ class InformationComponent extends React.Component {
     renderShade() {
         return (
             <div>
-                <div>What’s Shade/Light Step?</div>
+                <div className='title'>What’s Shade/Light Step?</div>
 
                 <p>Shade and or Light is how close to being fully luminated (100%, white)   or dark a color is (0%, black). So the higher the step the more drastic the lighter or darker a color becomes.</p>
 
