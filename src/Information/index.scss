@@ -1,6 +1,6 @@
 .InformationComponent {
     position: fixed;
-    background: rgba(51, 51, 51, .9);
+    background: rgba(51, 51, 51, .96);
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -53,6 +53,7 @@
             text-align: center;
             padding-bottom: 40px;
             font-family: fBold;
+            line-height: 48px;
         }
 
         p {
