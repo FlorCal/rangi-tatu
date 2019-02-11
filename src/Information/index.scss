@@ -134,16 +134,12 @@
     }
 
     @media screen and (max-width: 320px) {
+        grid-template-columns: 10px 1fr 10px;
         overflow-x: hidden;
 
         .about {
-            div {
+            .title {
                 font-size: 30px;
-                padding-bottom: 40px;
-
-                .wrapperSelector {
-                    height: 24px;
-                }
             }
         }
     }
