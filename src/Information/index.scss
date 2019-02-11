@@ -134,12 +134,16 @@
     }
 
     @media screen and (max-width: 320px) {
+        overflow-x: hidden;
 
         .about {
             div {
                 font-size: 30px;
                 padding-bottom: 40px;
-                padding-top: 50px;
+
+                .wrapperSelector {
+                    height: 24px;
+                }
             }
         }
     }
