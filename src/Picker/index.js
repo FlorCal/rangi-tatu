@@ -12,6 +12,11 @@ import constants from '../../constants'
 
 class PickerComponent extends React.Component {
 
+    keypress(e){
+        if(e.key == 'Enter'){
+            this.props.createSchemes()
+        }
+    }
 
     render() {
 
@@ -34,6 +39,7 @@ class PickerComponent extends React.Component {
                         <div className='title' >Drop in a hex code</div>
                         <input className='wrapper' type='text' placeholder='#FFFFFF' maxLength='7'
                             value={this.props.hexCode}
+                            onKeyPress={this.keypress.bind(this)}
                             onChange={this.props.baseColorChange.bind(this)}/>
                     </div>
 
