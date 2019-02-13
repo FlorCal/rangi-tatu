@@ -5,6 +5,7 @@ import React from 'react'
 import Button from '../Button'
 import Selector from './Selector'
 
+
 // assets
 import picker from '../app/img/picker.svg'
 import constants from '../../constants'
@@ -39,6 +40,8 @@ class PickerComponent extends React.Component {
                     <Selector
                         passClass='standard'
                         title='WCAG Standard'
+                        link= 'huh?'
+                        onLinkclick={this.props.openInformation.bind(this, 'standard')}
                         options={['WCAG AA', 'WCAG AAA']}
                         active={this.props.standard}
                         click={this.props.changeStandard}/>
@@ -46,6 +49,8 @@ class PickerComponent extends React.Component {
                     <Selector
                         passClass='hue'
                         title='Hue Step'
+                        link= 'huh?'
+                        onLinkclick={this.props.openInformation.bind(this, 'hue')}
                         options={constants.SelectorOptions.hueOptions}
                         active={this.props.hue}
                         click={this.props.changeHue}/>
@@ -53,6 +58,8 @@ class PickerComponent extends React.Component {
                     <Selector
                         passClass='saturation'
                         title='Saturation Step'
+                        link= 'huh?'
+                        onLinkclick={this.props.openInformation.bind(this, 'saturation')}
                         options={constants.SelectorOptions.saturationOptions}
                         active={this.props.saturation}
                         click={this.props.changeSaturation}/>
@@ -60,6 +67,8 @@ class PickerComponent extends React.Component {
                     <Selector
                         passClass='shade'
                         title='Shade/Light Step'
+                        link= 'huh?'
+                        onLinkclick={this.props.openInformation.bind(this, 'shade')}
                         options={constants.SelectorOptions.shadeOptions}
                         active={this.props.shade}
                         click={this.props.changeShade}/>

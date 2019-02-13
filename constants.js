@@ -1,3 +1,4 @@
+
 export default {
     minShadeLightStep: 10,
     maxShadeLightStep: 90,
@@ -7,5 +8,5 @@ export default {
         hueOptions: ['10°', '15°', '20°'],
         saturationOptions: ['10%', '15%', '20%'],
         shadeOptions: ['10%', '15%', '20%']
-    }
+    },
 }

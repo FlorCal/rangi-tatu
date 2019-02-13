@@ -1,0 +1,148 @@
+.InformationComponent {
+    position: fixed;
+    background: rgba(51, 51, 51, .96);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 560px 1fr;
+    grid-template-rows: 30px 48px 94px 570px 1fr;
+    grid-template-areas:
+    '. . . '
+    '.  ButtonComponent  .'
+    '. . . '
+    '.  about  .'
+    '. . .';
+
+    .ButtonComponent {
+        grid-area: ButtonComponent;
+        box-shadow: none;
+        background: $cWhite;
+        color: $cGrey;
+        height: 48px !important;
+        width: 140px;
+        border-radius: 4px;
+        justify-self: center;
+        font-size: $sFont;
+        font-family: fRegular;
+        text-decoration: underline;
+
+        &:hover {
+            animation: none;
+        }
+
+        &:active {
+            box-shadow: none;
+            background: $cWhite;
+        }
+
+        &:focus {
+            border: 0;
+        }
+
+    }// ButtonComponent
+
+    .about {
+        grid-area: about;
+        color: $cWhite;
+
+        .title {
+            font-size: 40px;
+            text-align: center;
+            padding-bottom: 40px;
+            font-family: fBold;
+            line-height: 48px;
+        }
+
+        p {
+            padding-bottom: 30px;
+            line-height: 28px;
+            font-size: 18px;
+            text-align: center;
+            font-family: fRegular;
+        }
+
+        .test {
+            padding-bottom: 50px;
+        }
+
+        span {
+            cursor: pointer;
+            display: inline-block;
+            border-bottom: .5px solid $cWhite;
+        }
+
+        .wrapperSelector {
+            width: 300px;
+            height: 64px;
+            background-color: $cWhite;
+            margin-left: 50%;
+            transform: translate(-50%);
+            position: relative;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+
+            .SelectorComponent {
+                height: 44px;
+                padding-bottom: 40px;
+                position: absolute;
+                top: -35px;
+                left: -10px;
+
+                .wrapper {
+                    width: 280px;
+                }
+            }
+        }
+
+        .visual {
+            @mixin vizImage($value) { //mixin
+                height: 160px;
+                width: 300px;
+                background: url('./app/img/#{$value}.png') no-repeat;
+                background-position: bottom center;
+                margin: 0 auto;
+                padding-bottom: 50px;
+            }
+
+            $list: hue10, hue15, hue20, saturation10, saturation15, saturation20, shade10, shade15, shade20;
+
+            @each $visual in $list { // for each loop
+                &.#{$visual} { @include  vizImage(#{$visual}); }
+            }
+        } // visual
+
+    } // about
+
+
+    @media #{$phone} {
+        grid-template-columns: 20px 1fr 20px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .about {
+          
+            .title {
+                font-size: 30px;
+            }
+        }
+    }
+
+    @media #{$tablet} {
+
+        .about {
+            margin-bottom: 80px;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        grid-template-columns: 10px 1fr 10px;
+        overflow-x: hidden;
+
+    }
+
+} // HueInfoComponent

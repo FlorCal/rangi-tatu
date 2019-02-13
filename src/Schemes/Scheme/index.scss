@@ -10,6 +10,7 @@
         position: relative;
         height: inherit;
         padding: 0 20px;
+        pointer-events: none;
 
         .name {
             font-size: 48px;
@@ -19,8 +20,22 @@
         }
 
         .hue {
+            display: inline-block;
             padding-top: 10px;
             line-height: 1.5;
+
+            .hexCode {
+                display: inline-block;
+                padding: 2px 5px;
+                margin-left: 3px;
+                border-radius: 4px;
+            }
+
+        }
+
+        .copyMessage {
+            position: absolute;
+            bottom: 10px;
         }
 
     } // texts
@@ -39,6 +54,15 @@
         .hue {
             font-size: 14px;
         }
+    }
+
+    @media #{$phone} {
+        .texts {
+            .name {
+                font-size: 36px;
+            }
+        }
+
     }
 
 }// SchemeComponent

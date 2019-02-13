@@ -13,6 +13,8 @@ import Container from './Container'
 import Picker from './Picker'
 import Intro from './Intro'
 import About from './About'
+import Information from './Information'
+
 
 class Renderer extends React.Component {
 
@@ -26,6 +28,9 @@ class Renderer extends React.Component {
             schemes: false, // schemes page appear  or not appear
 
             about: false, // application/team information that overlays whole app
+
+            information: false,
+
             hexCode: '',
             baseColor: '', // will always start with #
             standard: 'WCAG AA',
@@ -161,6 +166,14 @@ class Renderer extends React.Component {
         this.setState({intro: false})
     }
 
+    openInformation(whichPage) {
+        this.setState({information: whichPage})
+    }
+
+    closeInformation() {
+        this.setState({information: false})
+    }
+
     changeStandard(val) {
         this.setState({standard: val})
     }
@@ -218,7 +231,17 @@ class Renderer extends React.Component {
                     changeShade={this.changeShade.bind(this)}
                     createSchemes={this.createSchemes.bind(this)}
                     baseColorChange={this.baseColorChange.bind(this)}
+                    openInformation={this.openInformation.bind(this)}
                 />
+
+                {this.state.information ?
+                    <Information {...this.state}
+                        onBackClick={this.closeInformation.bind(this)}
+                        changeHue={this.changeHue.bind(this)}
+                        changeSaturation={this.changeSaturation.bind(this)}
+                        changeShade={this.changeShade.bind(this)}/>
+
+                    : null}
 
                 {this.state.intro ?
                     <Intro
