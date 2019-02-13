@@ -46,7 +46,6 @@
     .about {
         grid-area: about;
         color: $cWhite;
-        align-self: center;
 
         .title {
             font-size: 40px;
@@ -124,6 +123,13 @@
         &::-webkit-scrollbar {
             display: none;
         }
+
+        .about {
+          
+            .title {
+                font-size: 30px;
+            }
+        }
     }
 
     @media #{$tablet} {
@@ -137,11 +143,6 @@
         grid-template-columns: 10px 1fr 10px;
         overflow-x: hidden;
 
-        .about {
-            .title {
-                font-size: 30px;
-            }
-        }
     }
 
 } // HueInfoComponent

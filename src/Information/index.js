@@ -12,7 +12,7 @@ class InformationComponent extends React.Component {
     renderStandard() {
 
         return (
-            <div style={{paddingBottom: 80}}>
+            <div>
                 <div className='title'>What’s WCAG?</div>
                 <p>
           WCAG, is short for Web Content Accessibility Guidelines. What does that even mean you ask? They’re set of documents that explain how to make web content more accessible to people with disabilities.
@@ -29,7 +29,7 @@ class InformationComponent extends React.Component {
     renderHue() {
 
         return (
-            <div style={{paddingTop: 20}}>
+            <div>
                 <div className='title'>What’s Hue Step?</div>
 
                 <p>Hue is also known as color or the position on a color wheel. Hue step is the degree of separation between different colors on the wheel. So the wider the hue step, the larger the variance of colors but lower the number of combinations.</p>
@@ -73,7 +73,7 @@ class InformationComponent extends React.Component {
 
     renderShade() {
         return (
-            <div style={{paddingBottom: 20}}>
+            <div>
                 <div className='title'>What’s Shade/Light Step?</div>
 
                 <p>Shade and or Light is how close to being fully luminated (100%, white)   or dark a color is (0%, black). So the higher the step the more drastic the lighter or darker a color becomes.</p>
