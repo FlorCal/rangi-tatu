@@ -118,6 +118,7 @@
 
     @media #{$phone} {
         grid-template-columns: 20px 1fr 20px;
+        grid-template-rows: 30px 48px 60px 570px 100px;
         overflow-y: scroll;
 
         &::-webkit-scrollbar {
@@ -125,9 +126,12 @@
         }
 
         .about {
-          
+
             .title {
                 font-size: 30px;
+            }
+            p {
+                margin: 0 10px;
             }
         }
     }
