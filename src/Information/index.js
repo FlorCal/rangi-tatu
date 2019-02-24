@@ -51,7 +51,7 @@ class InformationComponent extends React.Component {
 
     renderSaturation() {
         return (
-            <div>
+            <div className='saturation'>
                 <div className='title'>What’s Saturation Step?</div>
 
                 <p>Saturation is the intensity of a color, from pure, or super bright, being 100% to gray, 0%, all while maintaining the same lightness level. The lower the saturation the more washed out colors tend to look. So the higher the step, the quicker the color gets to gray.</p>
