@@ -53,7 +53,7 @@ class SchemeComponent extends React.Component {
                     {this.props.colors.map((color, i) =>(
                         <CopyToClipboard
                             key={i}
-                            text={'#' + convert.hsl.hex(color)}
+                            text={convert.hsl.hex(color)}
                             onCopy={() => this.setState({copied: true})}>
                             <div
                                 onMouseEnter={this.onColorMouseEnter.bind(this, '#' + convert.hsl.hex(color))}
