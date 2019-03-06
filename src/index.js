@@ -142,7 +142,12 @@ class Renderer extends React.Component {
 
         console.info(`%cTotal: ${count1}, Passed: ${count2}`, 'background: #832C65')
 
-        this.setState({schemesCombinations: newSchemesCombinations}, callback)
+        this.setState({schemesCombinations: newSchemesCombinations}, () => {
+            callback()
+            setTimeout(()=>{
+                document.getElementsByClassName('SchemesComponent')[0].scrollTo(0, 0)
+            }, 300)          
+        })
     } //
 
     // actions
