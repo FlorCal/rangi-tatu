@@ -24,7 +24,8 @@
     "lodash": "^4.17.10",
     "react": "^16.5.2",
     "react-copy-to-clipboard": "^5.0.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-ga": "^2.5.7"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

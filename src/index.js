@@ -1,19 +1,23 @@
+// libraries
 import React from 'react'
 import ReactDOM from 'react-dom'
 import convert from 'color-convert'
 import contrast from 'get-contrast'
+import ReactGA from 'react-ga';
 
 // assets
 import './index.scss'
 import constants from '../constants'
 import createRandomNames from './app/data/name.js'
 
-//componenets
+//nenets
 import Container from './Container'
 import Picker from './Picker'
 import Intro from './Intro'
 import About from './About'
 import Information from './Information'
+
+ReactGA.initialize(constants.googleAnalyticsId);
 
 
 class Renderer extends React.Component {
@@ -55,10 +59,11 @@ class Renderer extends React.Component {
     }
 
     // lifecycle
-    // componentDidMount(){
-    //     this.closeIntro()
-    //     this.createSchemes()
-    // }
+    componentDidMount(){
+        ReactGA.ga('send', 'pageview', '/intro')
+        // this.closeIntro()
+        // this.createSchemes()
+    }
 
     // accepts: base degree and complimantary angle degree
     // outputs: 2 complimantary color degrees [firstComp, secondComp]
@@ -94,6 +99,11 @@ class Renderer extends React.Component {
 
 
     generateCombinations(callback) {
+        ReactGA.event({
+            category: 'Combinations',
+            action: 'Generate'
+        });
+
         let newSchemesCombinations = []
         let baseHsl = convert.hex.hsl(this.state.baseColor.replace('#', ''))
         let hue = parseInt(this.state.hue)
@@ -145,8 +155,8 @@ class Renderer extends React.Component {
         this.setState({schemesCombinations: newSchemesCombinations}, () => {
             callback()
             setTimeout(()=>{
-                document.getElementsByClassName('SchemesComponent')[0].scrollTo(0, 0)
-            }, 300)          
+                document.getElementsByClassName('Schemesnent')[0].scrollTo(0, 0)
+            }, 300)
         })
     } //
 
@@ -169,6 +179,10 @@ class Renderer extends React.Component {
 
     closeIntro() {
         this.setState({intro: false})
+        ReactGA.event({
+            category: 'General',
+            action: 'Close Intro'
+        });
     }
 
     openInformation(whichPage) {
@@ -221,7 +235,6 @@ class Renderer extends React.Component {
     }
 
     render() {
-
         return (
             <div>
                 <Container {...this.state}

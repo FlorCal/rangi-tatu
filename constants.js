@@ -9,4 +9,5 @@ export default {
         saturationOptions: ['10%', '15%', '20%'],
         shadeOptions: ['10%', '15%', '20%']
     },
+    googleAnalyticsId: 'UA-136410505-1'
 }
