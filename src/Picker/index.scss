@@ -19,7 +19,7 @@
         border-bottom: .1px solid $cGrey;
         z-index: 1;
         grid-template-columns: 20px 42px 1fr 1fr 20px;
-        grid-template-rows: 67px 35px;
+        grid-template-rows: 60px 30px;
         grid-template-areas:
         '. img title close .'
         '. . . . .';
@@ -51,19 +51,19 @@
 
     .selectorWrapper {
         position: absolute;
-        top: 101px;
+        top: 90px;
         width: 100%;
         overflow-y: auto;
         overflow-x: hidden;
-        max-height: calc(100vh - 101px);
+        max-height: calc(100vh - 90px);
 
         &::-webkit-scrollbar {
             display: none;
         }
 
         .DropHex {
-            padding-top: 20px;
-            background-color: #c8e4f9;
+            padding-top: 15px;
+            background-color: #eaf9fd;
         }
         .standard {
             margin-top: 20px;
