@@ -36,25 +36,25 @@ class PickerComponent extends React.Component {
                 <div className='selectorWrapper'>
 
                     <div className='DropHex'>
-                        <div className='title' >Drop in a hex code</div>
+                        <div className='title' >1. Drop in a hex code</div>
                         <input className='wrapper' type='text' placeholder='#FFFFFF' maxLength='7'
                             value={this.props.hexCode}
                             onKeyPress={this.keypress.bind(this)}
                             onChange={this.props.baseColorChange.bind(this)}/>
                     </div>
 
-                    <Selector
+                    {/* <Selector
                         passClass='standard'
                         title='WCAG Standard'
                         link= 'huh?'
                         onLinkclick={this.props.openInformation.bind(this, 'standard')}
                         options={['WCAG AA', 'WCAG AAA']}
                         active={this.props.standard}
-                        click={this.props.changeStandard}/>
+                        click={this.props.changeStandard}/> */}
 
                     <Selector
                         passClass='hue'
-                        title='Hue Step'
+                        title='2. Hue Step'
                         link= 'huh?'
                         onLinkclick={this.props.openInformation.bind(this, 'hue')}
                         options={constants.SelectorOptions.hueOptions}
@@ -63,7 +63,7 @@ class PickerComponent extends React.Component {
 
                     <Selector
                         passClass='saturation'
-                        title='Saturation Step'
+                        title='3. Saturation Step'
                         link= 'huh?'
                         onLinkclick={this.props.openInformation.bind(this, 'saturation')}
                         options={constants.SelectorOptions.saturationOptions}
@@ -72,7 +72,7 @@ class PickerComponent extends React.Component {
 
                     <Selector
                         passClass='shade'
-                        title='Shade/Light Step'
+                        title='4. Shade/Light Step'
                         link= 'huh?'
                         onLinkclick={this.props.openInformation.bind(this, 'shade')}
                         options={constants.SelectorOptions.shadeOptions}
