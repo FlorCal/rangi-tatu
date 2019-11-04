@@ -20,7 +20,7 @@ class LoadingComponent extends React.Component {
         return (
             <div className='LoadingComponent' style={{background: baseColor, color: textColor}}>
                 <img className='bowl' src={isBaseColorDark ? bowlWhite : bowl} />
-                <div className='stir'>Stir stir stir...</div>
+                <div className='stir'>Stir stir stir ...</div>
             </div>
         )
     }

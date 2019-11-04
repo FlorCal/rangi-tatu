@@ -12,7 +12,7 @@ class IntroComponent extends React.Component {
                 <div className='title'>Rangi Bora</div>
 
                 <div className='info'>
-                    Generate accessible and pleasing sets of 4 color palettes that are WCAG2 compliant.
+                    Generate accessible and pleasing sets of 4 color palettes that are WCAG2 AA compliant.
                 </div>
 
                 <div className='border'></div>

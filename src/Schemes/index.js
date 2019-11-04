@@ -32,7 +32,7 @@ class SchemesComponent extends React.Component {
                             <Scheme hexColor={baseColor} colors={scheme.colors} name={scheme.name} key={i} />
                         ))}
                     </div> :
-                    <div className='noSchemesMessage' style={{color: textColor}}>So this is awkward but there aren&apos;t any compliant colors. Please try again.</div>
+                    <div className='noSchemesMessage' style={{color: textColor}}>Oops! There aren&apos;t any compliant color groupings. Please choose a new color and try again.</div>
                 }
             </div>
         )

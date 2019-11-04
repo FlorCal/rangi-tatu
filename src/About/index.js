@@ -42,7 +42,7 @@ class AboutComponent extends React.Component {
 
                 <div className='about'>
                     <div className='title'>what&apos;s this?</div>
-                    <div className='info'>There were no sites that could generate schemes of WCAG AA/AAA compliant colors.  So I decided to do something about that, and the rest, they say, is history
+                    <div className='info'>There were no sites that could generate schemes of WCAG2 AA compliant colors.  So I decided to do something about that, and the rest, they say, is history
                     </div>
 
                     {this.plotRandomImage()}

@@ -4,7 +4,7 @@
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 640 1fr;
-    grid-template-rows: 1fr 170px 120px 2fr;
+    grid-template-rows: 1fr 170px 100px 2fr;
     grid-template-areas:
     '. . . '
     '. bowl .'
@@ -15,7 +15,7 @@
         grid-area: bowl;
         align-self: center;
         justify-self: center;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
     }
 
     .stir {

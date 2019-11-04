@@ -1,38 +1,37 @@
 .ButtonComponent {
     height: 64px !important;
-    border-radius: 4px;
-    border: 0;
-    box-shadow: inset 0 -6px 0 0 rgba(0, 0, 0, .3),
-    2px 6px 2px 1px rgba(51, 51, 51, .1);
-    background: #4f5a65;
-    color: $cWhite;
+    border: 2px solid $cGrey;
+    background: $cCTA;
+    color: $cGrey;
     font-size: $sFontMedium;
-    font-family: fRegular;
+    letter-spacing: 0.7px;
+    word-spacing: 3px;
+    font-family: fBold;
     outline: none;
 
     &:hover {
         cursor: pointer;
-        animation: 2500ms backgroundColor infinite;
-
-        @keyframes backgroundColor {
-            0% { background-color: #2777c6; }
-            20% { background-color: #22b8c8; }
-            30% { background-color: #22d5b9; }
-            40% { background-color: #47d530; }
-            50% { background-color: #cec821; }
-            60% { background-color: #d3851f; }
-            70% { background-color: #d5351f; }
-            80% { background-color: #c721d4; }
-            100% { background-color: #8447d5; }
+        animation: 2500ms boxShadow infinite;
+        
+        @keyframes boxShadow {
+            0% { box-shadow: 5px 5px 0px 0px rgba(39, 119, 197, 1); } // #2777c6
+            20% { box-shadow: 5px 5px 0px 0px rgba(34, 184, 200, 1); } // #22b8c8
+            30% { box-shadow: 5px 5px 0px 0px rgba(34, 213, 185, 1); } //#22d5b9
+            40% { box-shadow: 5px 5px 0px 0px rgba(71, 213, 48, 1); } //#47d530
+            50% { box-shadow: 5px 5px 0px 0px rgba(206, 200, 33, 1); } //#cec821
+            60% { box-shadow: 5px 5px 0px 0px rgba(211, 133, 31, 1); } // #d3851f
+            70% { box-shadow: 5px 5px 0px 0px rgba(213, 53, 31, 1); } //#d5351f
+            80% { box-shadow: 5px 5px 0px 0px rgba(199, 33, 212, 1); } //#c721d4
+            100% { box-shadow: 5px 5px 0px 0px rgba(132, 71, 213, 1);} //#8447d5
         }
     }
 
     &:active{
-        box-shadow: inset 0 5px 0 0 rgba(0, 0, 0, .3);
-        background: #4f5a65;
+        background: $cCTA;
     }
 
     &:focus {
-        border: 5px solid #53cbed;
+        outline:  5px solid #53cbed;
+        z-index: 1;
     }
 } // ButtonComponent

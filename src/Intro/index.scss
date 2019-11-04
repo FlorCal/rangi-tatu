@@ -6,12 +6,11 @@
     top: 0;
     left: 0;
     display: grid;
-    grid-template-columns: 1fr 575px 1fr;
-    grid-template-rows: 1fr 200px 5px 118px 2fr;
+    grid-template-columns: 1fr 600px 1fr;
+    grid-template-rows: 1fr 150px 64px 2fr;
     grid-template-areas:
     '. title .'
     '. info .'
-    '. border .'
     '. ButtonComponent .'
     '. . .';
 
@@ -31,14 +30,8 @@
         align-self: center;
         line-height: 40px;
         word-spacing: .5px;
-        padding-top: 70px;
     }
 
-    .border {
-        grid-area: border;
-        border-bottom: 5px solid $cGrey;
-        margin: 0 8px 0 6px;
-    }
 
     .ButtonComponent {
         grid-area: ButtonComponent;
@@ -56,7 +49,7 @@
         width: 100%;
         height: 100%;
         grid-template-columns: 20px 1fr 20px;
-        grid-template-rows: 2fr 200px 5px 186px 1.5fr;
+        grid-template-rows: 1fr 140px 64px 1.5fr;
 
         .title {
             font-size: 30px;
@@ -66,8 +59,6 @@
             font-size: 18px;
             line-height: 32px;
             padding-top: 0;
-            padding-left: 12px;
-            padding-right: 12px;
 
             .border {
                 margin: 0;
