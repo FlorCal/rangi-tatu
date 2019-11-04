@@ -17,19 +17,32 @@
 
     .ButtonComponent {
         grid-area: ButtonComponent;
-        box-shadow: none;
+        border: none;
         background: $cWhite;
         color: $cGrey;
         height: 48px !important;
-        width: 140px;
-        border-radius: 4px;
+        padding: 0 20px 0 20px;
+        width: auto;
         justify-self: center;
         font-size: $sFont;
-        font-family: fRegular;
-        text-decoration: underline;
+        font-family: fBold;
+        text-decoration: none;
 
         &:hover {
-            animation: none;
+            cursor: pointer;
+            animation: 2500ms boxShadow infinite;
+            
+            @keyframes boxShadow {
+                0% { box-shadow: 5px 5px 0px 0px rgba(39, 119, 197, 1); } // #2777c6
+                20% { box-shadow: 5px 5px 0px 0px rgba(34, 184, 200, 1); } // #22b8c8
+                30% { box-shadow: 5px 5px 0px 0px rgba(34, 213, 185, 1); } //#22d5b9
+                40% { box-shadow: 5px 5px 0px 0px rgba(71, 213, 48, 1); } //#47d530
+                50% { box-shadow: 5px 5px 0px 0px rgba(206, 200, 33, 1); } //#cec821
+                60% { box-shadow: 5px 5px 0px 0px rgba(211, 133, 31, 1); } // #d3851f
+                70% { box-shadow: 5px 5px 0px 0px rgba(213, 53, 31, 1); } //#d5351f
+                80% { box-shadow: 5px 5px 0px 0px rgba(199, 33, 212, 1); } //#c721d4
+                100% { box-shadow: 5px 5px 0px 0px rgba(132, 71, 213, 1);} //#8447d5
+            }
         }
 
         &:active {
@@ -80,8 +93,6 @@
             margin-left: 50%;
             transform: translate(-50%);
             position: relative;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
 
             .SelectorComponent {
                 height: 44px;
