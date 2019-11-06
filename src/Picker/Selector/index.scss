@@ -45,27 +45,23 @@
 
     .wrapper {
         grid-area: wrapper;
-        height: 48px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-
 
         button {
             overflow: hidden;
             background: #fefefe;
-            border: 2px solid $cGrey;
+            border: 1px solid $cGrey;
             font-family: fRegular;
             font-size: $sFont;
-            margin-left: -2px;
+            margin-left: -1px;
             text-align: center;
-            line-height: 48px;
-            padding: 0px;
-            outline: none;
+            height: 48px;
+            outline: 1px solid $cGrey;
             cursor: pointer;
 
-
             &.active {
-                background: $cDarkGrey;
+                background: $cGrey;
                 font-family: fBold;
                 color: $cWhite;
             }
@@ -74,9 +70,7 @@
                 
                 &:nth-child(1) {
                     background: $cWhite;
-                    z-index: 1;
                     animation: 2500ms boxBottom1 infinite;
-    
                      @keyframes boxBottom1 {
                         0% { box-shadow: -5px 5px 0px 0px rgba(39, 119, 197, 1); } // #2777c6
                         20% { box-shadow: -5px 5px 0px 0px rgba(34, 184, 200, 1); } // #22b8c8
@@ -91,9 +85,7 @@
                 }
                 &:nth-child(2) {
                     background: $cWhite;
-                    z-index: 1;
                     animation: 2500ms boxBottom2 infinite;
-    
                      @keyframes boxBottom2 {
                         0% { box-shadow: 0px 5px 0px 0px rgba(39, 119, 197, 1); } // #2777c6
                         20% { box-shadow: 0px 5px 0px 0px rgba(34, 184, 200, 1); } // #22b8c8
@@ -108,9 +100,7 @@
                 }
                 &:nth-child(3) {
                     background: $cWhite;
-                    z-index: 1;
                     animation: 2500ms boxBottom3 infinite;
-    
                      @keyframes boxBottom3 {
                         0% { box-shadow: 5px 5px 0px 0px rgba(39, 119, 197, 1); } // #2777c6
                         20% { box-shadow: 5px 5px 0px 0px rgba(34, 184, 200, 1); } // #22b8c8
